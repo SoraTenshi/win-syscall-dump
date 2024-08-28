@@ -1,11 +1,16 @@
 .{
     .name = "load-syscall-table",
     .version = "0.0.0",
-    .dependencies = .{},
+    .dependencies = .{
+        .args = .{
+            .url = "git+https://github.com/ikskuh/zig-args?ref=master#c5f79a133c1eeab38298493c2f4a2b4bd9a9c791",
+            .hash = "1220904d2fdcd970dd0d216211d092eb3ef6da01117163cc9393ab845a1d66c029d9",
+        },
+    },
 
     .paths = .{
         "build.zig",
         "build.zig.zon",
-        "src",
+        "syscalls.zig",
     },
 }
