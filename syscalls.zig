@@ -33,52 +33,54 @@ pub const FunctionInformation = struct {
 
 pub const DllInfo = struct {
     allocator: std.mem.Allocator,
-    fi: []FunctionInformation,
+    dll: struct {
+        fi: []FunctionInformation,
+        name: []const u8,
+    },
 
     pub fn deinit(self: DllInfo) void {
-        self.allocator.free(self.fi);
+        for (self.dll.fi) |n| {
+            self.allocator.free(n.name);
+        }
+        self.allocator.free(self.dll.fi);
     }
 };
 
-/// Fills the information of the `ScanInformation` struct
+/// Fills the information of the `DllInfo` struct
 /// Parameters:
-///   scan_information: A pointer to the instance of a `ScanInformation` struct
-///   path_to_dlls: A string to where the .DLLs reside
 ///   alloc: The allocator.
+///   path_to_dlls: The actual system path where the requested paths can be found
 ///   max_load_size: The maximum amount of how much of the binary can be kept in memory.
 ///                  If `null` is passed, it will use 1GB (1000 * 1000 * 1000 Bytes)
 /// Return:
-///   The pointer to the passed `scan_information` or in case something went wrong an error.
+///   The DllInfo struct, which contains all the collected information
+///   The caller owns the memory.
+/// Errors:
+///   Typical errors, File not found, OOM, ...
 pub fn fillInformation(
     alloc: std.mem.Allocator,
     path_to_dlls: []const u8,
     dll: []const u8,
     comptime max_load_size: ?usize,
-) !DllInfo {
+) !*DllInfo {
+    const log = std.log.scoped(.Syscalls);
     const path = try std.fs.path.join(alloc, &.{ path_to_dlls, dll });
+    defer alloc.free(path);
 
     const file = try std.fs.openFileAbsolute(path, .{});
     defer file.close();
 
-    var data = std.ArrayList(u8).init(alloc);
-    defer data.deinit();
-    try file.reader().readAllArrayList(&data, max_load_size orelse gb);
+    const data = try file.reader().readAllAlloc(alloc, max_load_size orelse gb);
+    defer alloc.free(data);
 
-    const coff = try Coff.init(data.items, false);
+    const coff = try Coff.init(data, false);
 
     const export_table_dir = coff.getDataDirectories()[@intFromEnum(std.coff.DirectoryEntry.EXPORT)];
-    const immutable_data: []const u8 = data.items;
+    const immutable_data: []const u8 = data;
     var fbs = std.io.fixedBufferStream(immutable_data);
     try fbs.seekTo(export_table_dir.virtual_address);
 
     const export_table = try fbs.reader().readStructEndian(ExportDirectoryTable, .little);
-
-    // keep address temporarily, we exchange it with the syscall number.
-    const info = DllInfo{
-        .allocator = alloc,
-        .fi = try alloc.alloc(FunctionInformation, export_table.number_of_name_pointers),
-    };
-    errdefer alloc.free(info.fi);
 
     const addresses = try alloc.alloc(u32, export_table.number_of_name_pointers);
     defer alloc.free(addresses);
@@ -96,9 +98,24 @@ pub fn fillInformation(
         names[i] = try fbs.reader().readInt(u32, .little);
     }
 
+    log.info("Found {d} names and {d} addresses.", .{ names.len, addresses.len });
+
+    // keep address temporarily, we exchange it with the syscall number.
+    var list = try std.ArrayList(FunctionInformation).initCapacity(alloc, export_table.number_of_name_pointers);
+    const info = try alloc.create(DllInfo);
+    info.* = DllInfo{
+        .allocator = alloc,
+        .dll = .{
+            .fi = &.{},
+            .name = dll[0 .. std.mem.indexOfScalar(u8, dll, '.') orelse dll.len],
+        },
+    };
+    errdefer info.deinit();
+
     var i: usize = 0;
     for (addresses, names) |addr, name| {
         try fbs.seekTo(name);
+
         // i would assume no function has more than 100 characters.
         const n = try fbs.reader().readUntilDelimiterAlloc(alloc, 0, 100);
 
@@ -112,21 +129,16 @@ pub fn fillInformation(
         if (std.mem.eql(u8, &as_bits, "\x4c\x8b\xd1\xb8")) {
             try fbs.seekTo(addr + @sizeOf([4]u8));
             syscall = try fbs.reader().readInt(u32, .little);
-            const fi = FunctionInformation{ .name = n, .syscall = syscall };
-            info.fi[i] = fi;
+            try list.append(FunctionInformation{ .name = n, .syscall = syscall });
             i += 1;
         } else {
+            alloc.free(n);
             continue;
         }
     }
 
-    const log = std.log.scoped(.FillInformation);
-    if (!alloc.resize(info.fi, i)) {
-        log.err(
-            "The allocator could not resize the field list. Because of this, so many bytes are \"wasted\": {d}",
-            .{@sizeOf(FunctionInformation) * (info.fi.len - i)},
-        );
-    }
+    try list.resize(i);
+    info.dll.fi = try list.toOwnedSlice();
 
     return info;
 }

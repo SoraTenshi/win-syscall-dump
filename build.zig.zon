@@ -1,6 +1,6 @@
 .{
     .name = "load-syscall-table",
-    .version = "0.0.0",
+    .version = "0.0.1",
     .dependencies = .{
         .args = .{
             .url = "git+https://github.com/ikskuh/zig-args?ref=master#c5f79a133c1eeab38298493c2f4a2b4bd9a9c791",

@@ -8,7 +8,8 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
 
     const args = b.dependency("args", .{ .target = target, .optimize = optimize });
-    const load_syscall_table = b.createModule(.{
+
+    const load_syscall_table = b.addModule("load-syscall-table", .{
         .root_source_file = b.path("syscalls.zig"),
         .target = target,
         .optimize = optimize,
