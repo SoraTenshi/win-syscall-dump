@@ -24,32 +24,37 @@ pub fn main() !void {
         return;
     }
 
-    var info: [2]*syscalls.DllInfo = undefined;
+    var info: [2]?*syscalls.DllInfo = .{ null, null };
     for (options.positionals, 0..) |dll, i| {
+        std.debug.print("name: {s}\n", .{dll});
         info[i] = try syscalls.fillInformation(
             alloc,
             parsed.dll,
             dll,
+            .syscalls,
             null,
         );
     }
     defer for (info) |i| {
-        i.deinit();
-        alloc.destroy(i);
+        if (i) |inf| {
+            inf.deinit();
+            alloc.destroy(inf);
+        }
     };
 
     var jsons = try alloc.alloc(Json, options.positionals.len);
     defer alloc.free(jsons);
     for (0..options.positionals.len) |i| {
         jsons[i] = .{
-            .name = info[i].dll.name,
-            .function_info = info[i].dll.fi,
+            .name = info[i].?.dll.name,
+            .function_info = info[i].?.dll.fi,
         };
     }
 
     const stringified = try std.json.stringifyAlloc(alloc, jsons, .{ .whitespace = .indent_4 });
     defer alloc.free(stringified);
 
+    std.debug.print("parsed.file = {s}\n", .{parsed.file});
     const file = try std.fs.cwd().createFile(parsed.file, .{
         .read = true,
     });

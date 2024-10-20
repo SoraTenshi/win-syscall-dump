@@ -1,6 +1,8 @@
 const std = @import("std");
 
 const Coff = std.coff.Coff;
+const Buffer = std.io.FixedBufferStream([]const u8);
+const createBuffer = std.io.fixedBufferStream;
 
 pub const gb = 1_000_000_000;
 
@@ -46,6 +48,15 @@ pub const DllInfo = struct {
     }
 };
 
+/// The wanted mode for fillInformation to contain
+pub const Mode = enum {
+    /// Store only syscall indezes
+    syscalls,
+
+    /// Store (possibly resolved) imports / exports
+    addresses,
+};
+
 /// Fills the information of the `DllInfo` struct
 /// Parameters:
 ///   alloc: The allocator.
@@ -61,6 +72,7 @@ pub fn fillInformation(
     alloc: std.mem.Allocator,
     path_to_dlls: []const u8,
     dll: []const u8,
+    comptime mode: Mode,
     comptime max_load_size: ?usize,
 ) !*DllInfo {
     const log = std.log.scoped(.Syscalls);
@@ -77,7 +89,7 @@ pub fn fillInformation(
 
     const export_table_dir = coff.getDataDirectories()[@intFromEnum(std.coff.DirectoryEntry.EXPORT)];
     const immutable_data: []const u8 = data;
-    var fbs = std.io.fixedBufferStream(immutable_data);
+    var fbs = createBuffer(immutable_data);
     try fbs.seekTo(export_table_dir.virtual_address);
 
     const export_table = try fbs.reader().readStructEndian(ExportDirectoryTable, .little);
@@ -112,15 +124,35 @@ pub fn fillInformation(
     };
     errdefer info.deinit();
 
+    const i = switch (mode) {
+        inline .syscalls => try fillSyscalls(alloc, &fbs, addresses, names, &list),
+        inline .addresses => @as(usize, 0),
+    };
+
+    try list.resize(i);
+    info.dll.fi = try list.toOwnedSlice();
+
+    return info;
+}
+
+/// This function resolves all the syscalls
+///
+/// Return:
+///   The amount of iterations done
+fn fillSyscalls(
+    alloc: std.mem.Allocator,
+    fbs: *Buffer,
+    addresses: []u32,
+    names: []u32,
+    list: *std.ArrayList(FunctionInformation),
+) !usize {
     var i: usize = 0;
+    std.debug.print("addresses and names: {d}, {d}\n", .{ addresses.len, names.len });
     for (addresses, names) |addr, name| {
-        try fbs.seekTo(name);
-
-        // i would assume no function has more than 100 characters.
-        const n = try fbs.reader().readUntilDelimiterAlloc(alloc, 0, 100);
-
         try fbs.seekTo(addr);
         const func = try fbs.reader().readStructEndian(FunctionSig, .little);
+
+        const n = try resolveAddress(.string, alloc, fbs, name);
 
         var syscall: u32 = 0;
 
@@ -137,8 +169,38 @@ pub fn fillInformation(
         }
     }
 
-    try list.resize(i);
-    info.dll.fi = try list.toOwnedSlice();
+    return i;
+}
 
-    return info;
+const TypeOfAddress = enum {
+    /// Read a C String
+    string,
+    /// Read a simple address
+    address,
+
+    pub fn ResolveToType(comptime self: TypeOfAddress) type {
+        return switch (self) {
+            inline .string => []u8,
+            inline .address => u32,
+        };
+    }
+};
+
+/// On address_type == .string, then the caller owns the memory
+fn resolveAddress(
+    comptime address_type: TypeOfAddress,
+    alloc: std.mem.Allocator,
+    fbs: *Buffer,
+    address: u32,
+) !address_type.ResolveToType() {
+    switch (address_type) {
+        .string => {
+            try fbs.seekTo(address);
+
+            // i would assume no function has more than 100 characters.
+            return fbs.reader().readUntilDelimiterAlloc(alloc, 0, 100);
+        },
+        .address => {},
+    }
+    return 0;
 }
