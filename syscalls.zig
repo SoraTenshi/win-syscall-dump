@@ -58,15 +58,15 @@ pub const Mode = enum {
 };
 
 /// Fills the information of the `DllInfo` struct
-/// Parameters:
+/// # Parameters:
 ///   alloc: The allocator.
 ///   path_to_dlls: The actual system path where the requested paths can be found
 ///   max_load_size: The maximum amount of how much of the binary can be kept in memory.
 ///                  If `null` is passed, it will use 1GB (1000 * 1000 * 1000 Bytes)
-/// Return:
+/// # Return:
 ///   The DllInfo struct, which contains all the collected information
 ///   The caller owns the memory.
-/// Errors:
+/// # Errors:
 ///   Typical errors, File not found, OOM, ...
 pub fn fillInformation(
     alloc: std.mem.Allocator,
@@ -137,7 +137,7 @@ pub fn fillInformation(
 
 /// This function resolves all the syscalls
 ///
-/// Return:
+/// # Return:
 ///   The amount of iterations done
 fn fillSyscalls(
     alloc: std.mem.Allocator,
@@ -147,7 +147,6 @@ fn fillSyscalls(
     list: *std.ArrayList(FunctionInformation),
 ) !usize {
     var i: usize = 0;
-    std.debug.print("addresses and names: {d}, {d}\n", .{ addresses.len, names.len });
     for (addresses, names) |addr, name| {
         try fbs.seekTo(addr);
         const func = try fbs.reader().readStructEndian(FunctionSig, .little);
@@ -186,10 +185,10 @@ const TypeOfAddress = enum {
     }
 };
 
-/// On address_type == .string, then the caller owns the memory
+/// On `address_type` == `.string` the allocator is no longer optional.
 fn resolveAddress(
     comptime address_type: TypeOfAddress,
-    alloc: std.mem.Allocator,
+    alloc: ?std.mem.Allocator,
     fbs: *Buffer,
     address: u32,
 ) !address_type.ResolveToType() {
@@ -198,9 +197,11 @@ fn resolveAddress(
             try fbs.seekTo(address);
 
             // i would assume no function has more than 100 characters.
-            return fbs.reader().readUntilDelimiterAlloc(alloc, 0, 100);
+            return fbs.reader().readUntilDelimiterAlloc(alloc.?, 0, 100);
         },
-        .address => {},
+        .address => {
+            std.log.err("Address mode is not supported yet.", .{});
+            return 0;
+        },
     }
-    return 0;
 }

@@ -19,17 +19,30 @@ pub fn main() !void {
         .{ exe_name, exe_name },
     );
     defer alloc.free(out_text);
+
     if (parsed.help) {
         try args.printHelp(Args, out_text, std.io.getStdOut().writer());
         return;
     }
+
+    const parsed_dlls = parsed.dll orelse {
+        std.log.err("DLL argument not found.", .{});
+        try args.printHelp(Args, out_text, std.io.getStdOut().writer());
+        return;
+    };
+
+    const parsed_file = parsed.file orelse {
+        std.log.err("File to write to not found.", .{});
+        try args.printHelp(Args, out_text, std.io.getStdOut().writer());
+        return;
+    };
 
     var info: [2]?*syscalls.DllInfo = .{ null, null };
     for (options.positionals, 0..) |dll, i| {
         std.debug.print("name: {s}\n", .{dll});
         info[i] = try syscalls.fillInformation(
             alloc,
-            parsed.dll,
+            parsed_dlls,
             dll,
             .syscalls,
             null,
@@ -54,8 +67,7 @@ pub fn main() !void {
     const stringified = try std.json.stringifyAlloc(alloc, jsons, .{ .whitespace = .indent_4 });
     defer alloc.free(stringified);
 
-    std.debug.print("parsed.file = {s}\n", .{parsed.file});
-    const file = try std.fs.cwd().createFile(parsed.file, .{
+    const file = try std.fs.cwd().createFile(parsed_file, .{
         .read = true,
     });
     defer file.close();
@@ -69,8 +81,8 @@ const Json = struct {
 };
 
 const Args = struct {
-    dll: []const u8 = "",
-    file: []const u8 = "",
+    dll: ?[]const u8 = null,
+    file: ?[]const u8 = null,
     help: bool = false,
 
     pub const shorthands = .{
