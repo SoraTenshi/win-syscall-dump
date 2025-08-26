@@ -130,7 +130,7 @@ pub fn fillInformation(
     };
 
     try list.resize(i);
-    info.dll.fi = try list.toOwnedSlice();
+    info.dll.fi = try list.toOwnedSlice(alloc);
 
     return info;
 }
@@ -160,7 +160,7 @@ fn fillSyscalls(
         if (std.mem.eql(u8, &as_bits, "\x4c\x8b\xd1\xb8")) {
             try fbs.seekTo(addr + @sizeOf([4]u8));
             syscall = try fbs.reader().readInt(u32, .little);
-            try list.append(FunctionInformation{ .name = n, .syscall = syscall });
+            try list.append(alloc, FunctionInformation{ .name = n, .syscall = syscall });
             i += 1;
         } else {
             alloc.free(n);

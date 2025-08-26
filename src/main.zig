@@ -21,19 +21,19 @@ pub fn main() !void {
     defer alloc.free(out_text);
 
     if (parsed.help) {
-        try args.printHelp(Args, out_text, std.io.getStdOut().writer());
+        try args.printHelp(Args, out_text, std.fs.File.stdout().writer());
         return;
     }
 
     const parsed_dlls = parsed.dll orelse {
         std.log.err("DLL argument not found.", .{});
-        try args.printHelp(Args, out_text, std.io.getStdOut().writer());
+        try args.printHelp(Args, out_text, std.fs.File.stdout().writer());
         return;
     };
 
     const parsed_file = parsed.file orelse {
         std.log.err("File to write to not found.", .{});
-        try args.printHelp(Args, out_text, std.io.getStdOut().writer());
+        try args.printHelp(Args, out_text, std.fs.File.stdout().writer());
         return;
     };
 

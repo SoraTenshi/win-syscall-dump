@@ -1,5 +1,6 @@
 .{
     .name = .load_syscall_table,
+    .minimum_zig_version = "0.15.1",
     .version = "0.0.1",
     .fingerprint = 0xa9eebd642e67b10e,
     .dependencies = .{

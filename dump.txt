@@ -1,0 +1,3891 @@
+[
+    {
+        "name": "ntdll",
+        "function_info": [
+            {
+                "name": "NtAcceptConnectPort",
+                "syscall": 2
+            },
+            {
+                "name": "NtAccessCheck",
+                "syscall": 0
+            },
+            {
+                "name": "NtAccessCheckAndAuditAlarm",
+                "syscall": 41
+            },
+            {
+                "name": "NtAccessCheckByType",
+                "syscall": 99
+            },
+            {
+                "name": "NtAccessCheckByTypeAndAuditAlarm",
+                "syscall": 89
+            },
+            {
+                "name": "NtAccessCheckByTypeResultList",
+                "syscall": 100
+            },
+            {
+                "name": "NtAccessCheckByTypeResultListAndAuditAlarm",
+                "syscall": 101
+            },
+            {
+                "name": "NtAccessCheckByTypeResultListAndAuditAlarmByHandle",
+                "syscall": 102
+            },
+            {
+                "name": "NtAcquireCrossVmMutant",
+                "syscall": 103
+            },
+            {
+                "name": "NtAcquireProcessActivityReference",
+                "syscall": 104
+            },
+            {
+                "name": "NtAddAtom",
+                "syscall": 71
+            },
+            {
+                "name": "NtAddAtomEx",
+                "syscall": 105
+            },
+            {
+                "name": "NtAddBootEntry",
+                "syscall": 106
+            },
+            {
+                "name": "NtAddDriverEntry",
+                "syscall": 107
+            },
+            {
+                "name": "NtAdjustGroupsToken",
+                "syscall": 108
+            },
+            {
+                "name": "NtAdjustPrivilegesToken",
+                "syscall": 65
+            },
+            {
+                "name": "NtAdjustTokenClaimsAndDeviceGroups",
+                "syscall": 109
+            },
+            {
+                "name": "NtAlertResumeThread",
+                "syscall": 110
+            },
+            {
+                "name": "NtAlertThread",
+                "syscall": 111
+            },
+            {
+                "name": "NtAlertThreadByThreadId",
+                "syscall": 112
+            },
+            {
+                "name": "NtAllocateLocallyUniqueId",
+                "syscall": 113
+            },
+            {
+                "name": "NtAllocateReserveObject",
+                "syscall": 114
+            },
+            {
+                "name": "NtAllocateUserPhysicalPages",
+                "syscall": 115
+            },
+            {
+                "name": "NtAllocateUserPhysicalPagesEx",
+                "syscall": 116
+            },
+            {
+                "name": "NtAllocateUuids",
+                "syscall": 117
+            },
+            {
+                "name": "NtAllocateVirtualMemory",
+                "syscall": 24
+            },
+            {
+                "name": "NtAllocateVirtualMemoryEx",
+                "syscall": 118
+            },
+            {
+                "name": "NtAlpcAcceptConnectPort",
+                "syscall": 119
+            },
+            {
+                "name": "NtAlpcCancelMessage",
+                "syscall": 120
+            },
+            {
+                "name": "NtAlpcConnectPort",
+                "syscall": 121
+            },
+            {
+                "name": "NtAlpcConnectPortEx",
+                "syscall": 122
+            },
+            {
+                "name": "NtAlpcCreatePort",
+                "syscall": 123
+            },
+            {
+                "name": "NtAlpcCreatePortSection",
+                "syscall": 124
+            },
+            {
+                "name": "NtAlpcCreateResourceReserve",
+                "syscall": 125
+            },
+            {
+                "name": "NtAlpcCreateSectionView",
+                "syscall": 126
+            },
+            {
+                "name": "NtAlpcCreateSecurityContext",
+                "syscall": 127
+            },
+            {
+                "name": "NtAlpcDeletePortSection",
+                "syscall": 128
+            },
+            {
+                "name": "NtAlpcDeleteResourceReserve",
+                "syscall": 129
+            },
+            {
+                "name": "NtAlpcDeleteSectionView",
+                "syscall": 130
+            },
+            {
+                "name": "NtAlpcDeleteSecurityContext",
+                "syscall": 131
+            },
+            {
+                "name": "NtAlpcDisconnectPort",
+                "syscall": 132
+            },
+            {
+                "name": "NtAlpcImpersonateClientContainerOfPort",
+                "syscall": 133
+            },
+            {
+                "name": "NtAlpcImpersonateClientOfPort",
+                "syscall": 134
+            },
+            {
+                "name": "NtAlpcOpenSenderProcess",
+                "syscall": 135
+            },
+            {
+                "name": "NtAlpcOpenSenderThread",
+                "syscall": 136
+            },
+            {
+                "name": "NtAlpcQueryInformation",
+                "syscall": 137
+            },
+            {
+                "name": "NtAlpcQueryInformationMessage",
+                "syscall": 138
+            },
+            {
+                "name": "NtAlpcRevokeSecurityContext",
+                "syscall": 139
+            },
+            {
+                "name": "NtAlpcSendWaitReceivePort",
+                "syscall": 140
+            },
+            {
+                "name": "NtAlpcSetInformation",
+                "syscall": 141
+            },
+            {
+                "name": "NtApphelpCacheControl",
+                "syscall": 76
+            },
+            {
+                "name": "NtAreMappedFilesTheSame",
+                "syscall": 142
+            },
+            {
+                "name": "NtAssignProcessToJobObject",
+                "syscall": 143
+            },
+            {
+                "name": "NtAssociateWaitCompletionPacket",
+                "syscall": 144
+            },
+            {
+                "name": "NtCallEnclave",
+                "syscall": 145
+            },
+            {
+                "name": "NtCallbackReturn",
+                "syscall": 5
+            },
+            {
+                "name": "NtCancelIoFile",
+                "syscall": 93
+            },
+            {
+                "name": "NtCancelIoFileEx",
+                "syscall": 146
+            },
+            {
+                "name": "NtCancelSynchronousIoFile",
+                "syscall": 147
+            },
+            {
+                "name": "NtCancelTimer",
+                "syscall": 97
+            },
+            {
+                "name": "NtCancelTimer2",
+                "syscall": 148
+            },
+            {
+                "name": "NtCancelWaitCompletionPacket",
+                "syscall": 149
+            },
+            {
+                "name": "NtChangeProcessState",
+                "syscall": 150
+            },
+            {
+                "name": "NtChangeThreadState",
+                "syscall": 151
+            },
+            {
+                "name": "NtClearEvent",
+                "syscall": 62
+            },
+            {
+                "name": "NtClose",
+                "syscall": 15
+            },
+            {
+                "name": "NtCloseObjectAuditAlarm",
+                "syscall": 59
+            },
+            {
+                "name": "NtCommitComplete",
+                "syscall": 152
+            },
+            {
+                "name": "NtCommitEnlistment",
+                "syscall": 153
+            },
+            {
+                "name": "NtCommitRegistryTransaction",
+                "syscall": 154
+            },
+            {
+                "name": "NtCommitTransaction",
+                "syscall": 155
+            },
+            {
+                "name": "NtCompactKeys",
+                "syscall": 156
+            },
+            {
+                "name": "NtCompareObjects",
+                "syscall": 157
+            },
+            {
+                "name": "NtCompareSigningLevels",
+                "syscall": 158
+            },
+            {
+                "name": "NtCompareTokens",
+                "syscall": 159
+            },
+            {
+                "name": "NtCompleteConnectPort",
+                "syscall": 160
+            },
+            {
+                "name": "NtCompressKey",
+                "syscall": 161
+            },
+            {
+                "name": "NtConnectPort",
+                "syscall": 162
+            },
+            {
+                "name": "NtContinue",
+                "syscall": 67
+            },
+            {
+                "name": "NtContinueEx",
+                "syscall": 163
+            },
+            {
+                "name": "NtConvertBetweenAuxiliaryCounterAndPerformanceCounter",
+                "syscall": 164
+            },
+            {
+                "name": "NtCopyFileChunk",
+                "syscall": 165
+            },
+            {
+                "name": "NtCreateCpuPartition",
+                "syscall": 166
+            },
+            {
+                "name": "NtCreateCrossVmEvent",
+                "syscall": 167
+            },
+            {
+                "name": "NtCreateCrossVmMutant",
+                "syscall": 168
+            },
+            {
+                "name": "NtCreateDebugObject",
+                "syscall": 169
+            },
+            {
+                "name": "NtCreateDirectoryObject",
+                "syscall": 170
+            },
+            {
+                "name": "NtCreateDirectoryObjectEx",
+                "syscall": 171
+            },
+            {
+                "name": "NtCreateEnclave",
+                "syscall": 172
+            },
+            {
+                "name": "NtCreateEnlistment",
+                "syscall": 173
+            },
+            {
+                "name": "NtCreateEvent",
+                "syscall": 72
+            },
+            {
+                "name": "NtCreateEventPair",
+                "syscall": 174
+            },
+            {
+                "name": "NtCreateFile",
+                "syscall": 85
+            },
+            {
+                "name": "NtCreateIRTimer",
+                "syscall": 175
+            },
+            {
+                "name": "NtCreateIoCompletion",
+                "syscall": 176
+            },
+            {
+                "name": "NtCreateIoRing",
+                "syscall": 177
+            },
+            {
+                "name": "NtCreateJobObject",
+                "syscall": 178
+            },
+            {
+                "name": "NtCreateJobSet",
+                "syscall": 179
+            },
+            {
+                "name": "NtCreateKey",
+                "syscall": 29
+            },
+            {
+                "name": "NtCreateKeyTransacted",
+                "syscall": 180
+            },
+            {
+                "name": "NtCreateKeyedEvent",
+                "syscall": 181
+            },
+            {
+                "name": "NtCreateLowBoxToken",
+                "syscall": 182
+            },
+            {
+                "name": "NtCreateMailslotFile",
+                "syscall": 183
+            },
+            {
+                "name": "NtCreateMutant",
+                "syscall": 184
+            },
+            {
+                "name": "NtCreateNamedPipeFile",
+                "syscall": 185
+            },
+            {
+                "name": "NtCreatePagingFile",
+                "syscall": 186
+            },
+            {
+                "name": "NtCreatePartition",
+                "syscall": 187
+            },
+            {
+                "name": "NtCreatePort",
+                "syscall": 188
+            },
+            {
+                "name": "NtCreatePrivateNamespace",
+                "syscall": 189
+            },
+            {
+                "name": "NtCreateProcess",
+                "syscall": 190
+            },
+            {
+                "name": "NtCreateProcessEx",
+                "syscall": 77
+            },
+            {
+                "name": "NtCreateProcessStateChange",
+                "syscall": 191
+            },
+            {
+                "name": "NtCreateProfile",
+                "syscall": 192
+            },
+            {
+                "name": "NtCreateProfileEx",
+                "syscall": 193
+            },
+            {
+                "name": "NtCreateRegistryTransaction",
+                "syscall": 194
+            },
+            {
+                "name": "NtCreateResourceManager",
+                "syscall": 195
+            },
+            {
+                "name": "NtCreateSection",
+                "syscall": 74
+            },
+            {
+                "name": "NtCreateSectionEx",
+                "syscall": 196
+            },
+            {
+                "name": "NtCreateSemaphore",
+                "syscall": 197
+            },
+            {
+                "name": "NtCreateSymbolicLinkObject",
+                "syscall": 198
+            },
+            {
+                "name": "NtCreateThread",
+                "syscall": 78
+            },
+            {
+                "name": "NtCreateThreadEx",
+                "syscall": 199
+            },
+            {
+                "name": "NtCreateThreadStateChange",
+                "syscall": 200
+            },
+            {
+                "name": "NtCreateTimer",
+                "syscall": 201
+            },
+            {
+                "name": "NtCreateTimer2",
+                "syscall": 202
+            },
+            {
+                "name": "NtCreateToken",
+                "syscall": 203
+            },
+            {
+                "name": "NtCreateTokenEx",
+                "syscall": 204
+            },
+            {
+                "name": "NtCreateTransaction",
+                "syscall": 205
+            },
+            {
+                "name": "NtCreateTransactionManager",
+                "syscall": 206
+            },
+            {
+                "name": "NtCreateUserProcess",
+                "syscall": 207
+            },
+            {
+                "name": "NtCreateWaitCompletionPacket",
+                "syscall": 208
+            },
+            {
+                "name": "NtCreateWaitablePort",
+                "syscall": 209
+            },
+            {
+                "name": "NtCreateWnfStateName",
+                "syscall": 210
+            },
+            {
+                "name": "NtCreateWorkerFactory",
+                "syscall": 211
+            },
+            {
+                "name": "NtDebugActiveProcess",
+                "syscall": 212
+            },
+            {
+                "name": "NtDebugContinue",
+                "syscall": 213
+            },
+            {
+                "name": "NtDelayExecution",
+                "syscall": 52
+            },
+            {
+                "name": "NtDeleteAtom",
+                "syscall": 214
+            },
+            {
+                "name": "NtDeleteBootEntry",
+                "syscall": 215
+            },
+            {
+                "name": "NtDeleteDriverEntry",
+                "syscall": 216
+            },
+            {
+                "name": "NtDeleteFile",
+                "syscall": 217
+            },
+            {
+                "name": "NtDeleteKey",
+                "syscall": 218
+            },
+            {
+                "name": "NtDeleteObjectAuditAlarm",
+                "syscall": 219
+            },
+            {
+                "name": "NtDeletePrivateNamespace",
+                "syscall": 220
+            },
+            {
+                "name": "NtDeleteValueKey",
+                "syscall": 221
+            },
+            {
+                "name": "NtDeleteWnfStateData",
+                "syscall": 222
+            },
+            {
+                "name": "NtDeleteWnfStateName",
+                "syscall": 223
+            },
+            {
+                "name": "NtDeviceIoControlFile",
+                "syscall": 7
+            },
+            {
+                "name": "NtDirectGraphicsCall",
+                "syscall": 224
+            },
+            {
+                "name": "NtDisableLastKnownGood",
+                "syscall": 225
+            },
+            {
+                "name": "NtDisplayString",
+                "syscall": 226
+            },
+            {
+                "name": "NtDrawText",
+                "syscall": 227
+            },
+            {
+                "name": "NtDuplicateObject",
+                "syscall": 60
+            },
+            {
+                "name": "NtDuplicateToken",
+                "syscall": 66
+            },
+            {
+                "name": "NtEnableLastKnownGood",
+                "syscall": 228
+            },
+            {
+                "name": "NtEnumerateBootEntries",
+                "syscall": 229
+            },
+            {
+                "name": "NtEnumerateDriverEntries",
+                "syscall": 230
+            },
+            {
+                "name": "NtEnumerateKey",
+                "syscall": 50
+            },
+            {
+                "name": "NtEnumerateSystemEnvironmentValuesEx",
+                "syscall": 231
+            },
+            {
+                "name": "NtEnumerateTransactionObject",
+                "syscall": 232
+            },
+            {
+                "name": "NtEnumerateValueKey",
+                "syscall": 19
+            },
+            {
+                "name": "NtExtendSection",
+                "syscall": 233
+            },
+            {
+                "name": "NtFilterBootOption",
+                "syscall": 234
+            },
+            {
+                "name": "NtFilterToken",
+                "syscall": 235
+            },
+            {
+                "name": "NtFilterTokenEx",
+                "syscall": 236
+            },
+            {
+                "name": "NtFindAtom",
+                "syscall": 20
+            },
+            {
+                "name": "NtFlushBuffersFile",
+                "syscall": 75
+            },
+            {
+                "name": "NtFlushBuffersFileEx",
+                "syscall": 237
+            },
+            {
+                "name": "NtFlushInstallUILanguage",
+                "syscall": 238
+            },
+            {
+                "name": "NtFlushInstructionCache",
+                "syscall": 239
+            },
+            {
+                "name": "NtFlushKey",
+                "syscall": 240
+            },
+            {
+                "name": "NtFlushProcessWriteBuffers",
+                "syscall": 241
+            },
+            {
+                "name": "NtFlushVirtualMemory",
+                "syscall": 242
+            },
+            {
+                "name": "NtFlushWriteBuffer",
+                "syscall": 243
+            },
+            {
+                "name": "NtFreeUserPhysicalPages",
+                "syscall": 244
+            },
+            {
+                "name": "NtFreeVirtualMemory",
+                "syscall": 30
+            },
+            {
+                "name": "NtFreezeRegistry",
+                "syscall": 245
+            },
+            {
+                "name": "NtFreezeTransactions",
+                "syscall": 246
+            },
+            {
+                "name": "NtFsControlFile",
+                "syscall": 57
+            },
+            {
+                "name": "NtGetCachedSigningLevel",
+                "syscall": 247
+            },
+            {
+                "name": "NtGetCompleteWnfStateSubscription",
+                "syscall": 248
+            },
+            {
+                "name": "NtGetContextThread",
+                "syscall": 249
+            },
+            {
+                "name": "NtGetCurrentProcessorNumber",
+                "syscall": 250
+            },
+            {
+                "name": "NtGetCurrentProcessorNumberEx",
+                "syscall": 251
+            },
+            {
+                "name": "NtGetDevicePowerState",
+                "syscall": 252
+            },
+            {
+                "name": "NtGetMUIRegistryInfo",
+                "syscall": 253
+            },
+            {
+                "name": "NtGetNextProcess",
+                "syscall": 254
+            },
+            {
+                "name": "NtGetNextThread",
+                "syscall": 255
+            },
+            {
+                "name": "NtGetNlsSectionPtr",
+                "syscall": 256
+            },
+            {
+                "name": "NtGetNotificationResourceManager",
+                "syscall": 257
+            },
+            {
+                "name": "NtGetWriteWatch",
+                "syscall": 258
+            },
+            {
+                "name": "NtImpersonateAnonymousToken",
+                "syscall": 259
+            },
+            {
+                "name": "NtImpersonateClientOfPort",
+                "syscall": 31
+            },
+            {
+                "name": "NtImpersonateThread",
+                "syscall": 260
+            },
+            {
+                "name": "NtInitializeEnclave",
+                "syscall": 261
+            },
+            {
+                "name": "NtInitializeNlsFiles",
+                "syscall": 262
+            },
+            {
+                "name": "NtInitializeRegistry",
+                "syscall": 263
+            },
+            {
+                "name": "NtInitiatePowerAction",
+                "syscall": 264
+            },
+            {
+                "name": "NtIsProcessInJob",
+                "syscall": 79
+            },
+            {
+                "name": "NtIsSystemResumeAutomatic",
+                "syscall": 265
+            },
+            {
+                "name": "NtIsUILanguageComitted",
+                "syscall": 266
+            },
+            {
+                "name": "NtListenPort",
+                "syscall": 267
+            },
+            {
+                "name": "NtLoadDriver",
+                "syscall": 268
+            },
+            {
+                "name": "NtLoadEnclaveData",
+                "syscall": 269
+            },
+            {
+                "name": "NtLoadKey",
+                "syscall": 270
+            },
+            {
+                "name": "NtLoadKey2",
+                "syscall": 271
+            },
+            {
+                "name": "NtLoadKey3",
+                "syscall": 272
+            },
+            {
+                "name": "NtLoadKeyEx",
+                "syscall": 273
+            },
+            {
+                "name": "NtLockFile",
+                "syscall": 274
+            },
+            {
+                "name": "NtLockProductActivationKeys",
+                "syscall": 275
+            },
+            {
+                "name": "NtLockRegistryKey",
+                "syscall": 276
+            },
+            {
+                "name": "NtLockVirtualMemory",
+                "syscall": 277
+            },
+            {
+                "name": "NtMakePermanentObject",
+                "syscall": 278
+            },
+            {
+                "name": "NtMakeTemporaryObject",
+                "syscall": 279
+            },
+            {
+                "name": "NtManageHotPatch",
+                "syscall": 280
+            },
+            {
+                "name": "NtManagePartition",
+                "syscall": 281
+            },
+            {
+                "name": "NtMapCMFModule",
+                "syscall": 282
+            },
+            {
+                "name": "NtMapUserPhysicalPages",
+                "syscall": 283
+            },
+            {
+                "name": "NtMapUserPhysicalPagesScatter",
+                "syscall": 3
+            },
+            {
+                "name": "NtMapViewOfSection",
+                "syscall": 40
+            },
+            {
+                "name": "NtMapViewOfSectionEx",
+                "syscall": 284
+            },
+            {
+                "name": "NtModifyBootEntry",
+                "syscall": 285
+            },
+            {
+                "name": "NtModifyDriverEntry",
+                "syscall": 286
+            },
+            {
+                "name": "NtNotifyChangeDirectoryFile",
+                "syscall": 287
+            },
+            {
+                "name": "NtNotifyChangeDirectoryFileEx",
+                "syscall": 288
+            },
+            {
+                "name": "NtNotifyChangeKey",
+                "syscall": 289
+            },
+            {
+                "name": "NtNotifyChangeMultipleKeys",
+                "syscall": 290
+            },
+            {
+                "name": "NtNotifyChangeSession",
+                "syscall": 291
+            },
+            {
+                "name": "NtOpenCpuPartition",
+                "syscall": 292
+            },
+            {
+                "name": "NtOpenDirectoryObject",
+                "syscall": 88
+            },
+            {
+                "name": "NtOpenEnlistment",
+                "syscall": 293
+            },
+            {
+                "name": "NtOpenEvent",
+                "syscall": 64
+            },
+            {
+                "name": "NtOpenEventPair",
+                "syscall": 294
+            },
+            {
+                "name": "NtOpenFile",
+                "syscall": 51
+            },
+            {
+                "name": "NtOpenIoCompletion",
+                "syscall": 295
+            },
+            {
+                "name": "NtOpenJobObject",
+                "syscall": 296
+            },
+            {
+                "name": "NtOpenKey",
+                "syscall": 18
+            },
+            {
+                "name": "NtOpenKeyEx",
+                "syscall": 297
+            },
+            {
+                "name": "NtOpenKeyTransacted",
+                "syscall": 298
+            },
+            {
+                "name": "NtOpenKeyTransactedEx",
+                "syscall": 299
+            },
+            {
+                "name": "NtOpenKeyedEvent",
+                "syscall": 300
+            },
+            {
+                "name": "NtOpenMutant",
+                "syscall": 301
+            },
+            {
+                "name": "NtOpenObjectAuditAlarm",
+                "syscall": 302
+            },
+            {
+                "name": "NtOpenPartition",
+                "syscall": 303
+            },
+            {
+                "name": "NtOpenPrivateNamespace",
+                "syscall": 304
+            },
+            {
+                "name": "NtOpenProcess",
+                "syscall": 38
+            },
+            {
+                "name": "NtOpenProcessToken",
+                "syscall": 305
+            },
+            {
+                "name": "NtOpenProcessTokenEx",
+                "syscall": 48
+            },
+            {
+                "name": "NtOpenRegistryTransaction",
+                "syscall": 306
+            },
+            {
+                "name": "NtOpenResourceManager",
+                "syscall": 307
+            },
+            {
+                "name": "NtOpenSection",
+                "syscall": 55
+            },
+            {
+                "name": "NtOpenSemaphore",
+                "syscall": 308
+            },
+            {
+                "name": "NtOpenSession",
+                "syscall": 309
+            },
+            {
+                "name": "NtOpenSymbolicLinkObject",
+                "syscall": 310
+            },
+            {
+                "name": "NtOpenThread",
+                "syscall": 311
+            },
+            {
+                "name": "NtOpenThreadToken",
+                "syscall": 36
+            },
+            {
+                "name": "NtOpenThreadTokenEx",
+                "syscall": 47
+            },
+            {
+                "name": "NtOpenTimer",
+                "syscall": 312
+            },
+            {
+                "name": "NtOpenTransaction",
+                "syscall": 313
+            },
+            {
+                "name": "NtOpenTransactionManager",
+                "syscall": 314
+            },
+            {
+                "name": "NtPlugPlayControl",
+                "syscall": 315
+            },
+            {
+                "name": "NtPowerInformation",
+                "syscall": 95
+            },
+            {
+                "name": "NtPrePrepareComplete",
+                "syscall": 316
+            },
+            {
+                "name": "NtPrePrepareEnlistment",
+                "syscall": 317
+            },
+            {
+                "name": "NtPrepareComplete",
+                "syscall": 318
+            },
+            {
+                "name": "NtPrepareEnlistment",
+                "syscall": 319
+            },
+            {
+                "name": "NtPrivilegeCheck",
+                "syscall": 320
+            },
+            {
+                "name": "NtPrivilegeObjectAuditAlarm",
+                "syscall": 321
+            },
+            {
+                "name": "NtPrivilegedServiceAuditAlarm",
+                "syscall": 322
+            },
+            {
+                "name": "NtPropagationComplete",
+                "syscall": 323
+            },
+            {
+                "name": "NtPropagationFailed",
+                "syscall": 324
+            },
+            {
+                "name": "NtProtectVirtualMemory",
+                "syscall": 80
+            },
+            {
+                "name": "NtPssCaptureVaSpaceBulk",
+                "syscall": 325
+            },
+            {
+                "name": "NtPulseEvent",
+                "syscall": 326
+            },
+            {
+                "name": "NtQueryAttributesFile",
+                "syscall": 61
+            },
+            {
+                "name": "NtQueryAuxiliaryCounterFrequency",
+                "syscall": 327
+            },
+            {
+                "name": "NtQueryBootEntryOrder",
+                "syscall": 328
+            },
+            {
+                "name": "NtQueryBootOptions",
+                "syscall": 329
+            },
+            {
+                "name": "NtQueryDebugFilterState",
+                "syscall": 330
+            },
+            {
+                "name": "NtQueryDefaultLocale",
+                "syscall": 21
+            },
+            {
+                "name": "NtQueryDefaultUILanguage",
+                "syscall": 68
+            },
+            {
+                "name": "NtQueryDirectoryFile",
+                "syscall": 53
+            },
+            {
+                "name": "NtQueryDirectoryFileEx",
+                "syscall": 331
+            },
+            {
+                "name": "NtQueryDirectoryObject",
+                "syscall": 332
+            },
+            {
+                "name": "NtQueryDriverEntryOrder",
+                "syscall": 333
+            },
+            {
+                "name": "NtQueryEaFile",
+                "syscall": 334
+            },
+            {
+                "name": "NtQueryEvent",
+                "syscall": 86
+            },
+            {
+                "name": "NtQueryFullAttributesFile",
+                "syscall": 335
+            },
+            {
+                "name": "NtQueryInformationAtom",
+                "syscall": 336
+            },
+            {
+                "name": "NtQueryInformationByName",
+                "syscall": 337
+            },
+            {
+                "name": "NtQueryInformationCpuPartition",
+                "syscall": 338
+            },
+            {
+                "name": "NtQueryInformationEnlistment",
+                "syscall": 339
+            },
+            {
+                "name": "NtQueryInformationFile",
+                "syscall": 17
+            },
+            {
+                "name": "NtQueryInformationJobObject",
+                "syscall": 340
+            },
+            {
+                "name": "NtQueryInformationPort",
+                "syscall": 341
+            },
+            {
+                "name": "NtQueryInformationProcess",
+                "syscall": 25
+            },
+            {
+                "name": "NtQueryInformationResourceManager",
+                "syscall": 342
+            },
+            {
+                "name": "NtQueryInformationThread",
+                "syscall": 37
+            },
+            {
+                "name": "NtQueryInformationToken",
+                "syscall": 33
+            },
+            {
+                "name": "NtQueryInformationTransaction",
+                "syscall": 343
+            },
+            {
+                "name": "NtQueryInformationTransactionManager",
+                "syscall": 344
+            },
+            {
+                "name": "NtQueryInformationWorkerFactory",
+                "syscall": 345
+            },
+            {
+                "name": "NtQueryInstallUILanguage",
+                "syscall": 346
+            },
+            {
+                "name": "NtQueryIntervalProfile",
+                "syscall": 347
+            },
+            {
+                "name": "NtQueryIoCompletion",
+                "syscall": 348
+            },
+            {
+                "name": "NtQueryIoRingCapabilities",
+                "syscall": 349
+            },
+            {
+                "name": "NtQueryKey",
+                "syscall": 22
+            },
+            {
+                "name": "NtQueryLicenseValue",
+                "syscall": 350
+            },
+            {
+                "name": "NtQueryMultipleValueKey",
+                "syscall": 351
+            },
+            {
+                "name": "NtQueryMutant",
+                "syscall": 352
+            },
+            {
+                "name": "NtQueryObject",
+                "syscall": 16
+            },
+            {
+                "name": "NtQueryOpenSubKeys",
+                "syscall": 353
+            },
+            {
+                "name": "NtQueryOpenSubKeysEx",
+                "syscall": 354
+            },
+            {
+                "name": "NtQueryPerformanceCounter",
+                "syscall": 49
+            },
+            {
+                "name": "NtQueryPortInformationProcess",
+                "syscall": 355
+            },
+            {
+                "name": "NtQueryQuotaInformationFile",
+                "syscall": 356
+            },
+            {
+                "name": "NtQuerySection",
+                "syscall": 81
+            },
+            {
+                "name": "NtQuerySecurityAttributesToken",
+                "syscall": 357
+            },
+            {
+                "name": "NtQuerySecurityObject",
+                "syscall": 358
+            },
+            {
+                "name": "NtQuerySecurityPolicy",
+                "syscall": 359
+            },
+            {
+                "name": "NtQuerySemaphore",
+                "syscall": 360
+            },
+            {
+                "name": "NtQuerySymbolicLinkObject",
+                "syscall": 361
+            },
+            {
+                "name": "NtQuerySystemEnvironmentValue",
+                "syscall": 362
+            },
+            {
+                "name": "NtQuerySystemEnvironmentValueEx",
+                "syscall": 363
+            },
+            {
+                "name": "NtQuerySystemInformation",
+                "syscall": 54
+            },
+            {
+                "name": "NtQuerySystemInformationEx",
+                "syscall": 364
+            },
+            {
+                "name": "NtQueryTimer",
+                "syscall": 56
+            },
+            {
+                "name": "NtQueryTimerResolution",
+                "syscall": 365
+            },
+            {
+                "name": "NtQueryValueKey",
+                "syscall": 23
+            },
+            {
+                "name": "NtQueryVirtualMemory",
+                "syscall": 35
+            },
+            {
+                "name": "NtQueryVolumeInformationFile",
+                "syscall": 73
+            },
+            {
+                "name": "NtQueryWnfStateData",
+                "syscall": 366
+            },
+            {
+                "name": "NtQueryWnfStateNameInformation",
+                "syscall": 367
+            },
+            {
+                "name": "NtQueueApcThread",
+                "syscall": 69
+            },
+            {
+                "name": "NtQueueApcThreadEx",
+                "syscall": 368
+            },
+            {
+                "name": "NtQueueApcThreadEx2",
+                "syscall": 369
+            },
+            {
+                "name": "NtRaiseException",
+                "syscall": 370
+            },
+            {
+                "name": "NtRaiseHardError",
+                "syscall": 371
+            },
+            {
+                "name": "NtReadFile",
+                "syscall": 6
+            },
+            {
+                "name": "NtReadFileScatter",
+                "syscall": 46
+            },
+            {
+                "name": "NtReadOnlyEnlistment",
+                "syscall": 372
+            },
+            {
+                "name": "NtReadRequestData",
+                "syscall": 84
+            },
+            {
+                "name": "NtReadVirtualMemory",
+                "syscall": 63
+            },
+            {
+                "name": "NtReadVirtualMemoryEx",
+                "syscall": 373
+            },
+            {
+                "name": "NtRecoverEnlistment",
+                "syscall": 374
+            },
+            {
+                "name": "NtRecoverResourceManager",
+                "syscall": 375
+            },
+            {
+                "name": "NtRecoverTransactionManager",
+                "syscall": 376
+            },
+            {
+                "name": "NtRegisterProtocolAddressInformation",
+                "syscall": 377
+            },
+            {
+                "name": "NtRegisterThreadTerminatePort",
+                "syscall": 378
+            },
+            {
+                "name": "NtReleaseKeyedEvent",
+                "syscall": 379
+            },
+            {
+                "name": "NtReleaseMutant",
+                "syscall": 32
+            },
+            {
+                "name": "NtReleaseSemaphore",
+                "syscall": 10
+            },
+            {
+                "name": "NtReleaseWorkerFactoryWorker",
+                "syscall": 380
+            },
+            {
+                "name": "NtRemoveIoCompletion",
+                "syscall": 9
+            },
+            {
+                "name": "NtRemoveIoCompletionEx",
+                "syscall": 381
+            },
+            {
+                "name": "NtRemoveProcessDebug",
+                "syscall": 382
+            },
+            {
+                "name": "NtRenameKey",
+                "syscall": 383
+            },
+            {
+                "name": "NtRenameTransactionManager",
+                "syscall": 384
+            },
+            {
+                "name": "NtReplaceKey",
+                "syscall": 385
+            },
+            {
+                "name": "NtReplacePartitionUnit",
+                "syscall": 386
+            },
+            {
+                "name": "NtReplyPort",
+                "syscall": 12
+            },
+            {
+                "name": "NtReplyWaitReceivePort",
+                "syscall": 11
+            },
+            {
+                "name": "NtReplyWaitReceivePortEx",
+                "syscall": 43
+            },
+            {
+                "name": "NtReplyWaitReplyPort",
+                "syscall": 387
+            },
+            {
+                "name": "NtRequestPort",
+                "syscall": 388
+            },
+            {
+                "name": "NtRequestWaitReplyPort",
+                "syscall": 34
+            },
+            {
+                "name": "NtResetEvent",
+                "syscall": 389
+            },
+            {
+                "name": "NtResetWriteWatch",
+                "syscall": 390
+            },
+            {
+                "name": "NtRestoreKey",
+                "syscall": 391
+            },
+            {
+                "name": "NtResumeProcess",
+                "syscall": 392
+            },
+            {
+                "name": "NtResumeThread",
+                "syscall": 82
+            },
+            {
+                "name": "NtRevertContainerImpersonation",
+                "syscall": 393
+            },
+            {
+                "name": "NtRollbackComplete",
+                "syscall": 394
+            },
+            {
+                "name": "NtRollbackEnlistment",
+                "syscall": 395
+            },
+            {
+                "name": "NtRollbackRegistryTransaction",
+                "syscall": 396
+            },
+            {
+                "name": "NtRollbackTransaction",
+                "syscall": 397
+            },
+            {
+                "name": "NtRollforwardTransactionManager",
+                "syscall": 398
+            },
+            {
+                "name": "NtSaveKey",
+                "syscall": 399
+            },
+            {
+                "name": "NtSaveKeyEx",
+                "syscall": 400
+            },
+            {
+                "name": "NtSaveMergedKeys",
+                "syscall": 401
+            },
+            {
+                "name": "NtSecureConnectPort",
+                "syscall": 402
+            },
+            {
+                "name": "NtSerializeBoot",
+                "syscall": 403
+            },
+            {
+                "name": "NtSetBootEntryOrder",
+                "syscall": 404
+            },
+            {
+                "name": "NtSetBootOptions",
+                "syscall": 405
+            },
+            {
+                "name": "NtSetCachedSigningLevel",
+                "syscall": 406
+            },
+            {
+                "name": "NtSetCachedSigningLevel2",
+                "syscall": 407
+            },
+            {
+                "name": "NtSetContextThread",
+                "syscall": 408
+            },
+            {
+                "name": "NtSetDebugFilterState",
+                "syscall": 409
+            },
+            {
+                "name": "NtSetDefaultHardErrorPort",
+                "syscall": 410
+            },
+            {
+                "name": "NtSetDefaultLocale",
+                "syscall": 411
+            },
+            {
+                "name": "NtSetDefaultUILanguage",
+                "syscall": 412
+            },
+            {
+                "name": "NtSetDriverEntryOrder",
+                "syscall": 413
+            },
+            {
+                "name": "NtSetEaFile",
+                "syscall": 414
+            },
+            {
+                "name": "NtSetEvent",
+                "syscall": 14
+            },
+            {
+                "name": "NtSetEventBoostPriority",
+                "syscall": 45
+            },
+            {
+                "name": "NtSetHighEventPair",
+                "syscall": 415
+            },
+            {
+                "name": "NtSetHighWaitLowEventPair",
+                "syscall": 416
+            },
+            {
+                "name": "NtSetIRTimer",
+                "syscall": 417
+            },
+            {
+                "name": "NtSetInformationCpuPartition",
+                "syscall": 418
+            },
+            {
+                "name": "NtSetInformationDebugObject",
+                "syscall": 419
+            },
+            {
+                "name": "NtSetInformationEnlistment",
+                "syscall": 420
+            },
+            {
+                "name": "NtSetInformationFile",
+                "syscall": 39
+            },
+            {
+                "name": "NtSetInformationIoRing",
+                "syscall": 421
+            },
+            {
+                "name": "NtSetInformationJobObject",
+                "syscall": 422
+            },
+            {
+                "name": "NtSetInformationKey",
+                "syscall": 423
+            },
+            {
+                "name": "NtSetInformationObject",
+                "syscall": 92
+            },
+            {
+                "name": "NtSetInformationProcess",
+                "syscall": 28
+            },
+            {
+                "name": "NtSetInformationResourceManager",
+                "syscall": 424
+            },
+            {
+                "name": "NtSetInformationSymbolicLink",
+                "syscall": 425
+            },
+            {
+                "name": "NtSetInformationThread",
+                "syscall": 13
+            },
+            {
+                "name": "NtSetInformationToken",
+                "syscall": 426
+            },
+            {
+                "name": "NtSetInformationTransaction",
+                "syscall": 427
+            },
+            {
+                "name": "NtSetInformationTransactionManager",
+                "syscall": 428
+            },
+            {
+                "name": "NtSetInformationVirtualMemory",
+                "syscall": 429
+            },
+            {
+                "name": "NtSetInformationWorkerFactory",
+                "syscall": 430
+            },
+            {
+                "name": "NtSetIntervalProfile",
+                "syscall": 431
+            },
+            {
+                "name": "NtSetIoCompletion",
+                "syscall": 432
+            },
+            {
+                "name": "NtSetIoCompletionEx",
+                "syscall": 433
+            },
+            {
+                "name": "NtSetLdtEntries",
+                "syscall": 434
+            },
+            {
+                "name": "NtSetLowEventPair",
+                "syscall": 435
+            },
+            {
+                "name": "NtSetLowWaitHighEventPair",
+                "syscall": 436
+            },
+            {
+                "name": "NtSetQuotaInformationFile",
+                "syscall": 437
+            },
+            {
+                "name": "NtSetSecurityObject",
+                "syscall": 438
+            },
+            {
+                "name": "NtSetSystemEnvironmentValue",
+                "syscall": 439
+            },
+            {
+                "name": "NtSetSystemEnvironmentValueEx",
+                "syscall": 440
+            },
+            {
+                "name": "NtSetSystemInformation",
+                "syscall": 441
+            },
+            {
+                "name": "NtSetSystemPowerState",
+                "syscall": 442
+            },
+            {
+                "name": "NtSetSystemTime",
+                "syscall": 443
+            },
+            {
+                "name": "NtSetThreadExecutionState",
+                "syscall": 444
+            },
+            {
+                "name": "NtSetTimer",
+                "syscall": 98
+            },
+            {
+                "name": "NtSetTimer2",
+                "syscall": 445
+            },
+            {
+                "name": "NtSetTimerEx",
+                "syscall": 446
+            },
+            {
+                "name": "NtSetTimerResolution",
+                "syscall": 447
+            },
+            {
+                "name": "NtSetUuidSeed",
+                "syscall": 448
+            },
+            {
+                "name": "NtSetValueKey",
+                "syscall": 96
+            },
+            {
+                "name": "NtSetVolumeInformationFile",
+                "syscall": 449
+            },
+            {
+                "name": "NtSetWnfProcessNotificationEvent",
+                "syscall": 450
+            },
+            {
+                "name": "NtShutdownSystem",
+                "syscall": 451
+            },
+            {
+                "name": "NtShutdownWorkerFactory",
+                "syscall": 452
+            },
+            {
+                "name": "NtSignalAndWaitForSingleObject",
+                "syscall": 453
+            },
+            {
+                "name": "NtSinglePhaseReject",
+                "syscall": 454
+            },
+            {
+                "name": "NtStartProfile",
+                "syscall": 455
+            },
+            {
+                "name": "NtStopProfile",
+                "syscall": 456
+            },
+            {
+                "name": "NtSubmitIoRing",
+                "syscall": 457
+            },
+            {
+                "name": "NtSubscribeWnfStateChange",
+                "syscall": 458
+            },
+            {
+                "name": "NtSuspendProcess",
+                "syscall": 459
+            },
+            {
+                "name": "NtSuspendThread",
+                "syscall": 460
+            },
+            {
+                "name": "NtSystemDebugControl",
+                "syscall": 461
+            },
+            {
+                "name": "NtTerminateEnclave",
+                "syscall": 462
+            },
+            {
+                "name": "NtTerminateJobObject",
+                "syscall": 463
+            },
+            {
+                "name": "NtTerminateProcess",
+                "syscall": 44
+            },
+            {
+                "name": "NtTerminateThread",
+                "syscall": 83
+            },
+            {
+                "name": "NtTestAlert",
+                "syscall": 464
+            },
+            {
+                "name": "NtThawRegistry",
+                "syscall": 465
+            },
+            {
+                "name": "NtThawTransactions",
+                "syscall": 466
+            },
+            {
+                "name": "NtTraceControl",
+                "syscall": 467
+            },
+            {
+                "name": "NtTraceEvent",
+                "syscall": 94
+            },
+            {
+                "name": "NtTranslateFilePath",
+                "syscall": 468
+            },
+            {
+                "name": "NtUmsThreadYield",
+                "syscall": 469
+            },
+            {
+                "name": "NtUnloadDriver",
+                "syscall": 470
+            },
+            {
+                "name": "NtUnloadKey",
+                "syscall": 471
+            },
+            {
+                "name": "NtUnloadKey2",
+                "syscall": 472
+            },
+            {
+                "name": "NtUnloadKeyEx",
+                "syscall": 473
+            },
+            {
+                "name": "NtUnlockFile",
+                "syscall": 474
+            },
+            {
+                "name": "NtUnlockVirtualMemory",
+                "syscall": 475
+            },
+            {
+                "name": "NtUnmapViewOfSection",
+                "syscall": 42
+            },
+            {
+                "name": "NtUnmapViewOfSectionEx",
+                "syscall": 476
+            },
+            {
+                "name": "NtUnsubscribeWnfStateChange",
+                "syscall": 477
+            },
+            {
+                "name": "NtUpdateWnfStateData",
+                "syscall": 478
+            },
+            {
+                "name": "NtVdmControl",
+                "syscall": 479
+            },
+            {
+                "name": "NtWaitForAlertByThreadId",
+                "syscall": 480
+            },
+            {
+                "name": "NtWaitForDebugEvent",
+                "syscall": 481
+            },
+            {
+                "name": "NtWaitForKeyedEvent",
+                "syscall": 482
+            },
+            {
+                "name": "NtWaitForMultipleObjects",
+                "syscall": 91
+            },
+            {
+                "name": "NtWaitForMultipleObjects32",
+                "syscall": 26
+            },
+            {
+                "name": "NtWaitForSingleObject",
+                "syscall": 4
+            },
+            {
+                "name": "NtWaitForWorkViaWorkerFactory",
+                "syscall": 483
+            },
+            {
+                "name": "NtWaitHighEventPair",
+                "syscall": 484
+            },
+            {
+                "name": "NtWaitLowEventPair",
+                "syscall": 485
+            },
+            {
+                "name": "NtWorkerFactoryWorkerReady",
+                "syscall": 1
+            },
+            {
+                "name": "NtWriteFile",
+                "syscall": 8
+            },
+            {
+                "name": "NtWriteFileGather",
+                "syscall": 27
+            },
+            {
+                "name": "NtWriteRequestData",
+                "syscall": 87
+            },
+            {
+                "name": "NtWriteVirtualMemory",
+                "syscall": 58
+            },
+            {
+                "name": "NtYieldExecution",
+                "syscall": 70
+            },
+            {
+                "name": "RtlGetNativeSystemInformation",
+                "syscall": 54
+            },
+            {
+                "name": "ZwAcceptConnectPort",
+                "syscall": 2
+            },
+            {
+                "name": "ZwAccessCheck",
+                "syscall": 0
+            },
+            {
+                "name": "ZwAccessCheckAndAuditAlarm",
+                "syscall": 41
+            },
+            {
+                "name": "ZwAccessCheckByType",
+                "syscall": 99
+            },
+            {
+                "name": "ZwAccessCheckByTypeAndAuditAlarm",
+                "syscall": 89
+            },
+            {
+                "name": "ZwAccessCheckByTypeResultList",
+                "syscall": 100
+            },
+            {
+                "name": "ZwAccessCheckByTypeResultListAndAuditAlarm",
+                "syscall": 101
+            },
+            {
+                "name": "ZwAccessCheckByTypeResultListAndAuditAlarmByHandle",
+                "syscall": 102
+            },
+            {
+                "name": "ZwAcquireCrossVmMutant",
+                "syscall": 103
+            },
+            {
+                "name": "ZwAcquireProcessActivityReference",
+                "syscall": 104
+            },
+            {
+                "name": "ZwAddAtom",
+                "syscall": 71
+            },
+            {
+                "name": "ZwAddAtomEx",
+                "syscall": 105
+            },
+            {
+                "name": "ZwAddBootEntry",
+                "syscall": 106
+            },
+            {
+                "name": "ZwAddDriverEntry",
+                "syscall": 107
+            },
+            {
+                "name": "ZwAdjustGroupsToken",
+                "syscall": 108
+            },
+            {
+                "name": "ZwAdjustPrivilegesToken",
+                "syscall": 65
+            },
+            {
+                "name": "ZwAdjustTokenClaimsAndDeviceGroups",
+                "syscall": 109
+            },
+            {
+                "name": "ZwAlertResumeThread",
+                "syscall": 110
+            },
+            {
+                "name": "ZwAlertThread",
+                "syscall": 111
+            },
+            {
+                "name": "ZwAlertThreadByThreadId",
+                "syscall": 112
+            },
+            {
+                "name": "ZwAllocateLocallyUniqueId",
+                "syscall": 113
+            },
+            {
+                "name": "ZwAllocateReserveObject",
+                "syscall": 114
+            },
+            {
+                "name": "ZwAllocateUserPhysicalPages",
+                "syscall": 115
+            },
+            {
+                "name": "ZwAllocateUserPhysicalPagesEx",
+                "syscall": 116
+            },
+            {
+                "name": "ZwAllocateUuids",
+                "syscall": 117
+            },
+            {
+                "name": "ZwAllocateVirtualMemory",
+                "syscall": 24
+            },
+            {
+                "name": "ZwAllocateVirtualMemoryEx",
+                "syscall": 118
+            },
+            {
+                "name": "ZwAlpcAcceptConnectPort",
+                "syscall": 119
+            },
+            {
+                "name": "ZwAlpcCancelMessage",
+                "syscall": 120
+            },
+            {
+                "name": "ZwAlpcConnectPort",
+                "syscall": 121
+            },
+            {
+                "name": "ZwAlpcConnectPortEx",
+                "syscall": 122
+            },
+            {
+                "name": "ZwAlpcCreatePort",
+                "syscall": 123
+            },
+            {
+                "name": "ZwAlpcCreatePortSection",
+                "syscall": 124
+            },
+            {
+                "name": "ZwAlpcCreateResourceReserve",
+                "syscall": 125
+            },
+            {
+                "name": "ZwAlpcCreateSectionView",
+                "syscall": 126
+            },
+            {
+                "name": "ZwAlpcCreateSecurityContext",
+                "syscall": 127
+            },
+            {
+                "name": "ZwAlpcDeletePortSection",
+                "syscall": 128
+            },
+            {
+                "name": "ZwAlpcDeleteResourceReserve",
+                "syscall": 129
+            },
+            {
+                "name": "ZwAlpcDeleteSectionView",
+                "syscall": 130
+            },
+            {
+                "name": "ZwAlpcDeleteSecurityContext",
+                "syscall": 131
+            },
+            {
+                "name": "ZwAlpcDisconnectPort",
+                "syscall": 132
+            },
+            {
+                "name": "ZwAlpcImpersonateClientContainerOfPort",
+                "syscall": 133
+            },
+            {
+                "name": "ZwAlpcImpersonateClientOfPort",
+                "syscall": 134
+            },
+            {
+                "name": "ZwAlpcOpenSenderProcess",
+                "syscall": 135
+            },
+            {
+                "name": "ZwAlpcOpenSenderThread",
+                "syscall": 136
+            },
+            {
+                "name": "ZwAlpcQueryInformation",
+                "syscall": 137
+            },
+            {
+                "name": "ZwAlpcQueryInformationMessage",
+                "syscall": 138
+            },
+            {
+                "name": "ZwAlpcRevokeSecurityContext",
+                "syscall": 139
+            },
+            {
+                "name": "ZwAlpcSendWaitReceivePort",
+                "syscall": 140
+            },
+            {
+                "name": "ZwAlpcSetInformation",
+                "syscall": 141
+            },
+            {
+                "name": "ZwApphelpCacheControl",
+                "syscall": 76
+            },
+            {
+                "name": "ZwAreMappedFilesTheSame",
+                "syscall": 142
+            },
+            {
+                "name": "ZwAssignProcessToJobObject",
+                "syscall": 143
+            },
+            {
+                "name": "ZwAssociateWaitCompletionPacket",
+                "syscall": 144
+            },
+            {
+                "name": "ZwCallEnclave",
+                "syscall": 145
+            },
+            {
+                "name": "ZwCallbackReturn",
+                "syscall": 5
+            },
+            {
+                "name": "ZwCancelIoFile",
+                "syscall": 93
+            },
+            {
+                "name": "ZwCancelIoFileEx",
+                "syscall": 146
+            },
+            {
+                "name": "ZwCancelSynchronousIoFile",
+                "syscall": 147
+            },
+            {
+                "name": "ZwCancelTimer",
+                "syscall": 97
+            },
+            {
+                "name": "ZwCancelTimer2",
+                "syscall": 148
+            },
+            {
+                "name": "ZwCancelWaitCompletionPacket",
+                "syscall": 149
+            },
+            {
+                "name": "ZwChangeProcessState",
+                "syscall": 150
+            },
+            {
+                "name": "ZwChangeThreadState",
+                "syscall": 151
+            },
+            {
+                "name": "ZwClearEvent",
+                "syscall": 62
+            },
+            {
+                "name": "ZwClose",
+                "syscall": 15
+            },
+            {
+                "name": "ZwCloseObjectAuditAlarm",
+                "syscall": 59
+            },
+            {
+                "name": "ZwCommitComplete",
+                "syscall": 152
+            },
+            {
+                "name": "ZwCommitEnlistment",
+                "syscall": 153
+            },
+            {
+                "name": "ZwCommitRegistryTransaction",
+                "syscall": 154
+            },
+            {
+                "name": "ZwCommitTransaction",
+                "syscall": 155
+            },
+            {
+                "name": "ZwCompactKeys",
+                "syscall": 156
+            },
+            {
+                "name": "ZwCompareObjects",
+                "syscall": 157
+            },
+            {
+                "name": "ZwCompareSigningLevels",
+                "syscall": 158
+            },
+            {
+                "name": "ZwCompareTokens",
+                "syscall": 159
+            },
+            {
+                "name": "ZwCompleteConnectPort",
+                "syscall": 160
+            },
+            {
+                "name": "ZwCompressKey",
+                "syscall": 161
+            },
+            {
+                "name": "ZwConnectPort",
+                "syscall": 162
+            },
+            {
+                "name": "ZwContinue",
+                "syscall": 67
+            },
+            {
+                "name": "ZwContinueEx",
+                "syscall": 163
+            },
+            {
+                "name": "ZwConvertBetweenAuxiliaryCounterAndPerformanceCounter",
+                "syscall": 164
+            },
+            {
+                "name": "ZwCopyFileChunk",
+                "syscall": 165
+            },
+            {
+                "name": "ZwCreateCpuPartition",
+                "syscall": 166
+            },
+            {
+                "name": "ZwCreateCrossVmEvent",
+                "syscall": 167
+            },
+            {
+                "name": "ZwCreateCrossVmMutant",
+                "syscall": 168
+            },
+            {
+                "name": "ZwCreateDebugObject",
+                "syscall": 169
+            },
+            {
+                "name": "ZwCreateDirectoryObject",
+                "syscall": 170
+            },
+            {
+                "name": "ZwCreateDirectoryObjectEx",
+                "syscall": 171
+            },
+            {
+                "name": "ZwCreateEnclave",
+                "syscall": 172
+            },
+            {
+                "name": "ZwCreateEnlistment",
+                "syscall": 173
+            },
+            {
+                "name": "ZwCreateEvent",
+                "syscall": 72
+            },
+            {
+                "name": "ZwCreateEventPair",
+                "syscall": 174
+            },
+            {
+                "name": "ZwCreateFile",
+                "syscall": 85
+            },
+            {
+                "name": "ZwCreateIRTimer",
+                "syscall": 175
+            },
+            {
+                "name": "ZwCreateIoCompletion",
+                "syscall": 176
+            },
+            {
+                "name": "ZwCreateIoRing",
+                "syscall": 177
+            },
+            {
+                "name": "ZwCreateJobObject",
+                "syscall": 178
+            },
+            {
+                "name": "ZwCreateJobSet",
+                "syscall": 179
+            },
+            {
+                "name": "ZwCreateKey",
+                "syscall": 29
+            },
+            {
+                "name": "ZwCreateKeyTransacted",
+                "syscall": 180
+            },
+            {
+                "name": "ZwCreateKeyedEvent",
+                "syscall": 181
+            },
+            {
+                "name": "ZwCreateLowBoxToken",
+                "syscall": 182
+            },
+            {
+                "name": "ZwCreateMailslotFile",
+                "syscall": 183
+            },
+            {
+                "name": "ZwCreateMutant",
+                "syscall": 184
+            },
+            {
+                "name": "ZwCreateNamedPipeFile",
+                "syscall": 185
+            },
+            {
+                "name": "ZwCreatePagingFile",
+                "syscall": 186
+            },
+            {
+                "name": "ZwCreatePartition",
+                "syscall": 187
+            },
+            {
+                "name": "ZwCreatePort",
+                "syscall": 188
+            },
+            {
+                "name": "ZwCreatePrivateNamespace",
+                "syscall": 189
+            },
+            {
+                "name": "ZwCreateProcess",
+                "syscall": 190
+            },
+            {
+                "name": "ZwCreateProcessEx",
+                "syscall": 77
+            },
+            {
+                "name": "ZwCreateProcessStateChange",
+                "syscall": 191
+            },
+            {
+                "name": "ZwCreateProfile",
+                "syscall": 192
+            },
+            {
+                "name": "ZwCreateProfileEx",
+                "syscall": 193
+            },
+            {
+                "name": "ZwCreateRegistryTransaction",
+                "syscall": 194
+            },
+            {
+                "name": "ZwCreateResourceManager",
+                "syscall": 195
+            },
+            {
+                "name": "ZwCreateSection",
+                "syscall": 74
+            },
+            {
+                "name": "ZwCreateSectionEx",
+                "syscall": 196
+            },
+            {
+                "name": "ZwCreateSemaphore",
+                "syscall": 197
+            },
+            {
+                "name": "ZwCreateSymbolicLinkObject",
+                "syscall": 198
+            },
+            {
+                "name": "ZwCreateThread",
+                "syscall": 78
+            },
+            {
+                "name": "ZwCreateThreadEx",
+                "syscall": 199
+            },
+            {
+                "name": "ZwCreateThreadStateChange",
+                "syscall": 200
+            },
+            {
+                "name": "ZwCreateTimer",
+                "syscall": 201
+            },
+            {
+                "name": "ZwCreateTimer2",
+                "syscall": 202
+            },
+            {
+                "name": "ZwCreateToken",
+                "syscall": 203
+            },
+            {
+                "name": "ZwCreateTokenEx",
+                "syscall": 204
+            },
+            {
+                "name": "ZwCreateTransaction",
+                "syscall": 205
+            },
+            {
+                "name": "ZwCreateTransactionManager",
+                "syscall": 206
+            },
+            {
+                "name": "ZwCreateUserProcess",
+                "syscall": 207
+            },
+            {
+                "name": "ZwCreateWaitCompletionPacket",
+                "syscall": 208
+            },
+            {
+                "name": "ZwCreateWaitablePort",
+                "syscall": 209
+            },
+            {
+                "name": "ZwCreateWnfStateName",
+                "syscall": 210
+            },
+            {
+                "name": "ZwCreateWorkerFactory",
+                "syscall": 211
+            },
+            {
+                "name": "ZwDebugActiveProcess",
+                "syscall": 212
+            },
+            {
+                "name": "ZwDebugContinue",
+                "syscall": 213
+            },
+            {
+                "name": "ZwDelayExecution",
+                "syscall": 52
+            },
+            {
+                "name": "ZwDeleteAtom",
+                "syscall": 214
+            },
+            {
+                "name": "ZwDeleteBootEntry",
+                "syscall": 215
+            },
+            {
+                "name": "ZwDeleteDriverEntry",
+                "syscall": 216
+            },
+            {
+                "name": "ZwDeleteFile",
+                "syscall": 217
+            },
+            {
+                "name": "ZwDeleteKey",
+                "syscall": 218
+            },
+            {
+                "name": "ZwDeleteObjectAuditAlarm",
+                "syscall": 219
+            },
+            {
+                "name": "ZwDeletePrivateNamespace",
+                "syscall": 220
+            },
+            {
+                "name": "ZwDeleteValueKey",
+                "syscall": 221
+            },
+            {
+                "name": "ZwDeleteWnfStateData",
+                "syscall": 222
+            },
+            {
+                "name": "ZwDeleteWnfStateName",
+                "syscall": 223
+            },
+            {
+                "name": "ZwDeviceIoControlFile",
+                "syscall": 7
+            },
+            {
+                "name": "ZwDirectGraphicsCall",
+                "syscall": 224
+            },
+            {
+                "name": "ZwDisableLastKnownGood",
+                "syscall": 225
+            },
+            {
+                "name": "ZwDisplayString",
+                "syscall": 226
+            },
+            {
+                "name": "ZwDrawText",
+                "syscall": 227
+            },
+            {
+                "name": "ZwDuplicateObject",
+                "syscall": 60
+            },
+            {
+                "name": "ZwDuplicateToken",
+                "syscall": 66
+            },
+            {
+                "name": "ZwEnableLastKnownGood",
+                "syscall": 228
+            },
+            {
+                "name": "ZwEnumerateBootEntries",
+                "syscall": 229
+            },
+            {
+                "name": "ZwEnumerateDriverEntries",
+                "syscall": 230
+            },
+            {
+                "name": "ZwEnumerateKey",
+                "syscall": 50
+            },
+            {
+                "name": "ZwEnumerateSystemEnvironmentValuesEx",
+                "syscall": 231
+            },
+            {
+                "name": "ZwEnumerateTransactionObject",
+                "syscall": 232
+            },
+            {
+                "name": "ZwEnumerateValueKey",
+                "syscall": 19
+            },
+            {
+                "name": "ZwExtendSection",
+                "syscall": 233
+            },
+            {
+                "name": "ZwFilterBootOption",
+                "syscall": 234
+            },
+            {
+                "name": "ZwFilterToken",
+                "syscall": 235
+            },
+            {
+                "name": "ZwFilterTokenEx",
+                "syscall": 236
+            },
+            {
+                "name": "ZwFindAtom",
+                "syscall": 20
+            },
+            {
+                "name": "ZwFlushBuffersFile",
+                "syscall": 75
+            },
+            {
+                "name": "ZwFlushBuffersFileEx",
+                "syscall": 237
+            },
+            {
+                "name": "ZwFlushInstallUILanguage",
+                "syscall": 238
+            },
+            {
+                "name": "ZwFlushInstructionCache",
+                "syscall": 239
+            },
+            {
+                "name": "ZwFlushKey",
+                "syscall": 240
+            },
+            {
+                "name": "ZwFlushProcessWriteBuffers",
+                "syscall": 241
+            },
+            {
+                "name": "ZwFlushVirtualMemory",
+                "syscall": 242
+            },
+            {
+                "name": "ZwFlushWriteBuffer",
+                "syscall": 243
+            },
+            {
+                "name": "ZwFreeUserPhysicalPages",
+                "syscall": 244
+            },
+            {
+                "name": "ZwFreeVirtualMemory",
+                "syscall": 30
+            },
+            {
+                "name": "ZwFreezeRegistry",
+                "syscall": 245
+            },
+            {
+                "name": "ZwFreezeTransactions",
+                "syscall": 246
+            },
+            {
+                "name": "ZwFsControlFile",
+                "syscall": 57
+            },
+            {
+                "name": "ZwGetCachedSigningLevel",
+                "syscall": 247
+            },
+            {
+                "name": "ZwGetCompleteWnfStateSubscription",
+                "syscall": 248
+            },
+            {
+                "name": "ZwGetContextThread",
+                "syscall": 249
+            },
+            {
+                "name": "ZwGetCurrentProcessorNumber",
+                "syscall": 250
+            },
+            {
+                "name": "ZwGetCurrentProcessorNumberEx",
+                "syscall": 251
+            },
+            {
+                "name": "ZwGetDevicePowerState",
+                "syscall": 252
+            },
+            {
+                "name": "ZwGetMUIRegistryInfo",
+                "syscall": 253
+            },
+            {
+                "name": "ZwGetNextProcess",
+                "syscall": 254
+            },
+            {
+                "name": "ZwGetNextThread",
+                "syscall": 255
+            },
+            {
+                "name": "ZwGetNlsSectionPtr",
+                "syscall": 256
+            },
+            {
+                "name": "ZwGetNotificationResourceManager",
+                "syscall": 257
+            },
+            {
+                "name": "ZwGetWriteWatch",
+                "syscall": 258
+            },
+            {
+                "name": "ZwImpersonateAnonymousToken",
+                "syscall": 259
+            },
+            {
+                "name": "ZwImpersonateClientOfPort",
+                "syscall": 31
+            },
+            {
+                "name": "ZwImpersonateThread",
+                "syscall": 260
+            },
+            {
+                "name": "ZwInitializeEnclave",
+                "syscall": 261
+            },
+            {
+                "name": "ZwInitializeNlsFiles",
+                "syscall": 262
+            },
+            {
+                "name": "ZwInitializeRegistry",
+                "syscall": 263
+            },
+            {
+                "name": "ZwInitiatePowerAction",
+                "syscall": 264
+            },
+            {
+                "name": "ZwIsProcessInJob",
+                "syscall": 79
+            },
+            {
+                "name": "ZwIsSystemResumeAutomatic",
+                "syscall": 265
+            },
+            {
+                "name": "ZwIsUILanguageComitted",
+                "syscall": 266
+            },
+            {
+                "name": "ZwListenPort",
+                "syscall": 267
+            },
+            {
+                "name": "ZwLoadDriver",
+                "syscall": 268
+            },
+            {
+                "name": "ZwLoadEnclaveData",
+                "syscall": 269
+            },
+            {
+                "name": "ZwLoadKey",
+                "syscall": 270
+            },
+            {
+                "name": "ZwLoadKey2",
+                "syscall": 271
+            },
+            {
+                "name": "ZwLoadKey3",
+                "syscall": 272
+            },
+            {
+                "name": "ZwLoadKeyEx",
+                "syscall": 273
+            },
+            {
+                "name": "ZwLockFile",
+                "syscall": 274
+            },
+            {
+                "name": "ZwLockProductActivationKeys",
+                "syscall": 275
+            },
+            {
+                "name": "ZwLockRegistryKey",
+                "syscall": 276
+            },
+            {
+                "name": "ZwLockVirtualMemory",
+                "syscall": 277
+            },
+            {
+                "name": "ZwMakePermanentObject",
+                "syscall": 278
+            },
+            {
+                "name": "ZwMakeTemporaryObject",
+                "syscall": 279
+            },
+            {
+                "name": "ZwManageHotPatch",
+                "syscall": 280
+            },
+            {
+                "name": "ZwManagePartition",
+                "syscall": 281
+            },
+            {
+                "name": "ZwMapCMFModule",
+                "syscall": 282
+            },
+            {
+                "name": "ZwMapUserPhysicalPages",
+                "syscall": 283
+            },
+            {
+                "name": "ZwMapUserPhysicalPagesScatter",
+                "syscall": 3
+            },
+            {
+                "name": "ZwMapViewOfSection",
+                "syscall": 40
+            },
+            {
+                "name": "ZwMapViewOfSectionEx",
+                "syscall": 284
+            },
+            {
+                "name": "ZwModifyBootEntry",
+                "syscall": 285
+            },
+            {
+                "name": "ZwModifyDriverEntry",
+                "syscall": 286
+            },
+            {
+                "name": "ZwNotifyChangeDirectoryFile",
+                "syscall": 287
+            },
+            {
+                "name": "ZwNotifyChangeDirectoryFileEx",
+                "syscall": 288
+            },
+            {
+                "name": "ZwNotifyChangeKey",
+                "syscall": 289
+            },
+            {
+                "name": "ZwNotifyChangeMultipleKeys",
+                "syscall": 290
+            },
+            {
+                "name": "ZwNotifyChangeSession",
+                "syscall": 291
+            },
+            {
+                "name": "ZwOpenCpuPartition",
+                "syscall": 292
+            },
+            {
+                "name": "ZwOpenDirectoryObject",
+                "syscall": 88
+            },
+            {
+                "name": "ZwOpenEnlistment",
+                "syscall": 293
+            },
+            {
+                "name": "ZwOpenEvent",
+                "syscall": 64
+            },
+            {
+                "name": "ZwOpenEventPair",
+                "syscall": 294
+            },
+            {
+                "name": "ZwOpenFile",
+                "syscall": 51
+            },
+            {
+                "name": "ZwOpenIoCompletion",
+                "syscall": 295
+            },
+            {
+                "name": "ZwOpenJobObject",
+                "syscall": 296
+            },
+            {
+                "name": "ZwOpenKey",
+                "syscall": 18
+            },
+            {
+                "name": "ZwOpenKeyEx",
+                "syscall": 297
+            },
+            {
+                "name": "ZwOpenKeyTransacted",
+                "syscall": 298
+            },
+            {
+                "name": "ZwOpenKeyTransactedEx",
+                "syscall": 299
+            },
+            {
+                "name": "ZwOpenKeyedEvent",
+                "syscall": 300
+            },
+            {
+                "name": "ZwOpenMutant",
+                "syscall": 301
+            },
+            {
+                "name": "ZwOpenObjectAuditAlarm",
+                "syscall": 302
+            },
+            {
+                "name": "ZwOpenPartition",
+                "syscall": 303
+            },
+            {
+                "name": "ZwOpenPrivateNamespace",
+                "syscall": 304
+            },
+            {
+                "name": "ZwOpenProcess",
+                "syscall": 38
+            },
+            {
+                "name": "ZwOpenProcessToken",
+                "syscall": 305
+            },
+            {
+                "name": "ZwOpenProcessTokenEx",
+                "syscall": 48
+            },
+            {
+                "name": "ZwOpenRegistryTransaction",
+                "syscall": 306
+            },
+            {
+                "name": "ZwOpenResourceManager",
+                "syscall": 307
+            },
+            {
+                "name": "ZwOpenSection",
+                "syscall": 55
+            },
+            {
+                "name": "ZwOpenSemaphore",
+                "syscall": 308
+            },
+            {
+                "name": "ZwOpenSession",
+                "syscall": 309
+            },
+            {
+                "name": "ZwOpenSymbolicLinkObject",
+                "syscall": 310
+            },
+            {
+                "name": "ZwOpenThread",
+                "syscall": 311
+            },
+            {
+                "name": "ZwOpenThreadToken",
+                "syscall": 36
+            },
+            {
+                "name": "ZwOpenThreadTokenEx",
+                "syscall": 47
+            },
+            {
+                "name": "ZwOpenTimer",
+                "syscall": 312
+            },
+            {
+                "name": "ZwOpenTransaction",
+                "syscall": 313
+            },
+            {
+                "name": "ZwOpenTransactionManager",
+                "syscall": 314
+            },
+            {
+                "name": "ZwPlugPlayControl",
+                "syscall": 315
+            },
+            {
+                "name": "ZwPowerInformation",
+                "syscall": 95
+            },
+            {
+                "name": "ZwPrePrepareComplete",
+                "syscall": 316
+            },
+            {
+                "name": "ZwPrePrepareEnlistment",
+                "syscall": 317
+            },
+            {
+                "name": "ZwPrepareComplete",
+                "syscall": 318
+            },
+            {
+                "name": "ZwPrepareEnlistment",
+                "syscall": 319
+            },
+            {
+                "name": "ZwPrivilegeCheck",
+                "syscall": 320
+            },
+            {
+                "name": "ZwPrivilegeObjectAuditAlarm",
+                "syscall": 321
+            },
+            {
+                "name": "ZwPrivilegedServiceAuditAlarm",
+                "syscall": 322
+            },
+            {
+                "name": "ZwPropagationComplete",
+                "syscall": 323
+            },
+            {
+                "name": "ZwPropagationFailed",
+                "syscall": 324
+            },
+            {
+                "name": "ZwProtectVirtualMemory",
+                "syscall": 80
+            },
+            {
+                "name": "ZwPssCaptureVaSpaceBulk",
+                "syscall": 325
+            },
+            {
+                "name": "ZwPulseEvent",
+                "syscall": 326
+            },
+            {
+                "name": "ZwQueryAttributesFile",
+                "syscall": 61
+            },
+            {
+                "name": "ZwQueryAuxiliaryCounterFrequency",
+                "syscall": 327
+            },
+            {
+                "name": "ZwQueryBootEntryOrder",
+                "syscall": 328
+            },
+            {
+                "name": "ZwQueryBootOptions",
+                "syscall": 329
+            },
+            {
+                "name": "ZwQueryDebugFilterState",
+                "syscall": 330
+            },
+            {
+                "name": "ZwQueryDefaultLocale",
+                "syscall": 21
+            },
+            {
+                "name": "ZwQueryDefaultUILanguage",
+                "syscall": 68
+            },
+            {
+                "name": "ZwQueryDirectoryFile",
+                "syscall": 53
+            },
+            {
+                "name": "ZwQueryDirectoryFileEx",
+                "syscall": 331
+            },
+            {
+                "name": "ZwQueryDirectoryObject",
+                "syscall": 332
+            },
+            {
+                "name": "ZwQueryDriverEntryOrder",
+                "syscall": 333
+            },
+            {
+                "name": "ZwQueryEaFile",
+                "syscall": 334
+            },
+            {
+                "name": "ZwQueryEvent",
+                "syscall": 86
+            },
+            {
+                "name": "ZwQueryFullAttributesFile",
+                "syscall": 335
+            },
+            {
+                "name": "ZwQueryInformationAtom",
+                "syscall": 336
+            },
+            {
+                "name": "ZwQueryInformationByName",
+                "syscall": 337
+            },
+            {
+                "name": "ZwQueryInformationCpuPartition",
+                "syscall": 338
+            },
+            {
+                "name": "ZwQueryInformationEnlistment",
+                "syscall": 339
+            },
+            {
+                "name": "ZwQueryInformationFile",
+                "syscall": 17
+            },
+            {
+                "name": "ZwQueryInformationJobObject",
+                "syscall": 340
+            },
+            {
+                "name": "ZwQueryInformationPort",
+                "syscall": 341
+            },
+            {
+                "name": "ZwQueryInformationProcess",
+                "syscall": 25
+            },
+            {
+                "name": "ZwQueryInformationResourceManager",
+                "syscall": 342
+            },
+            {
+                "name": "ZwQueryInformationThread",
+                "syscall": 37
+            },
+            {
+                "name": "ZwQueryInformationToken",
+                "syscall": 33
+            },
+            {
+                "name": "ZwQueryInformationTransaction",
+                "syscall": 343
+            },
+            {
+                "name": "ZwQueryInformationTransactionManager",
+                "syscall": 344
+            },
+            {
+                "name": "ZwQueryInformationWorkerFactory",
+                "syscall": 345
+            },
+            {
+                "name": "ZwQueryInstallUILanguage",
+                "syscall": 346
+            },
+            {
+                "name": "ZwQueryIntervalProfile",
+                "syscall": 347
+            },
+            {
+                "name": "ZwQueryIoCompletion",
+                "syscall": 348
+            },
+            {
+                "name": "ZwQueryIoRingCapabilities",
+                "syscall": 349
+            },
+            {
+                "name": "ZwQueryKey",
+                "syscall": 22
+            },
+            {
+                "name": "ZwQueryLicenseValue",
+                "syscall": 350
+            },
+            {
+                "name": "ZwQueryMultipleValueKey",
+                "syscall": 351
+            },
+            {
+                "name": "ZwQueryMutant",
+                "syscall": 352
+            },
+            {
+                "name": "ZwQueryObject",
+                "syscall": 16
+            },
+            {
+                "name": "ZwQueryOpenSubKeys",
+                "syscall": 353
+            },
+            {
+                "name": "ZwQueryOpenSubKeysEx",
+                "syscall": 354
+            },
+            {
+                "name": "ZwQueryPerformanceCounter",
+                "syscall": 49
+            },
+            {
+                "name": "ZwQueryPortInformationProcess",
+                "syscall": 355
+            },
+            {
+                "name": "ZwQueryQuotaInformationFile",
+                "syscall": 356
+            },
+            {
+                "name": "ZwQuerySection",
+                "syscall": 81
+            },
+            {
+                "name": "ZwQuerySecurityAttributesToken",
+                "syscall": 357
+            },
+            {
+                "name": "ZwQuerySecurityObject",
+                "syscall": 358
+            },
+            {
+                "name": "ZwQuerySecurityPolicy",
+                "syscall": 359
+            },
+            {
+                "name": "ZwQuerySemaphore",
+                "syscall": 360
+            },
+            {
+                "name": "ZwQuerySymbolicLinkObject",
+                "syscall": 361
+            },
+            {
+                "name": "ZwQuerySystemEnvironmentValue",
+                "syscall": 362
+            },
+            {
+                "name": "ZwQuerySystemEnvironmentValueEx",
+                "syscall": 363
+            },
+            {
+                "name": "ZwQuerySystemInformation",
+                "syscall": 54
+            },
+            {
+                "name": "ZwQuerySystemInformationEx",
+                "syscall": 364
+            },
+            {
+                "name": "ZwQueryTimer",
+                "syscall": 56
+            },
+            {
+                "name": "ZwQueryTimerResolution",
+                "syscall": 365
+            },
+            {
+                "name": "ZwQueryValueKey",
+                "syscall": 23
+            },
+            {
+                "name": "ZwQueryVirtualMemory",
+                "syscall": 35
+            },
+            {
+                "name": "ZwQueryVolumeInformationFile",
+                "syscall": 73
+            },
+            {
+                "name": "ZwQueryWnfStateData",
+                "syscall": 366
+            },
+            {
+                "name": "ZwQueryWnfStateNameInformation",
+                "syscall": 367
+            },
+            {
+                "name": "ZwQueueApcThread",
+                "syscall": 69
+            },
+            {
+                "name": "ZwQueueApcThreadEx",
+                "syscall": 368
+            },
+            {
+                "name": "ZwQueueApcThreadEx2",
+                "syscall": 369
+            },
+            {
+                "name": "ZwRaiseException",
+                "syscall": 370
+            },
+            {
+                "name": "ZwRaiseHardError",
+                "syscall": 371
+            },
+            {
+                "name": "ZwReadFile",
+                "syscall": 6
+            },
+            {
+                "name": "ZwReadFileScatter",
+                "syscall": 46
+            },
+            {
+                "name": "ZwReadOnlyEnlistment",
+                "syscall": 372
+            },
+            {
+                "name": "ZwReadRequestData",
+                "syscall": 84
+            },
+            {
+                "name": "ZwReadVirtualMemory",
+                "syscall": 63
+            },
+            {
+                "name": "ZwReadVirtualMemoryEx",
+                "syscall": 373
+            },
+            {
+                "name": "ZwRecoverEnlistment",
+                "syscall": 374
+            },
+            {
+                "name": "ZwRecoverResourceManager",
+                "syscall": 375
+            },
+            {
+                "name": "ZwRecoverTransactionManager",
+                "syscall": 376
+            },
+            {
+                "name": "ZwRegisterProtocolAddressInformation",
+                "syscall": 377
+            },
+            {
+                "name": "ZwRegisterThreadTerminatePort",
+                "syscall": 378
+            },
+            {
+                "name": "ZwReleaseKeyedEvent",
+                "syscall": 379
+            },
+            {
+                "name": "ZwReleaseMutant",
+                "syscall": 32
+            },
+            {
+                "name": "ZwReleaseSemaphore",
+                "syscall": 10
+            },
+            {
+                "name": "ZwReleaseWorkerFactoryWorker",
+                "syscall": 380
+            },
+            {
+                "name": "ZwRemoveIoCompletion",
+                "syscall": 9
+            },
+            {
+                "name": "ZwRemoveIoCompletionEx",
+                "syscall": 381
+            },
+            {
+                "name": "ZwRemoveProcessDebug",
+                "syscall": 382
+            },
+            {
+                "name": "ZwRenameKey",
+                "syscall": 383
+            },
+            {
+                "name": "ZwRenameTransactionManager",
+                "syscall": 384
+            },
+            {
+                "name": "ZwReplaceKey",
+                "syscall": 385
+            },
+            {
+                "name": "ZwReplacePartitionUnit",
+                "syscall": 386
+            },
+            {
+                "name": "ZwReplyPort",
+                "syscall": 12
+            },
+            {
+                "name": "ZwReplyWaitReceivePort",
+                "syscall": 11
+            },
+            {
+                "name": "ZwReplyWaitReceivePortEx",
+                "syscall": 43
+            },
+            {
+                "name": "ZwReplyWaitReplyPort",
+                "syscall": 387
+            },
+            {
+                "name": "ZwRequestPort",
+                "syscall": 388
+            },
+            {
+                "name": "ZwRequestWaitReplyPort",
+                "syscall": 34
+            },
+            {
+                "name": "ZwResetEvent",
+                "syscall": 389
+            },
+            {
+                "name": "ZwResetWriteWatch",
+                "syscall": 390
+            },
+            {
+                "name": "ZwRestoreKey",
+                "syscall": 391
+            },
+            {
+                "name": "ZwResumeProcess",
+                "syscall": 392
+            },
+            {
+                "name": "ZwResumeThread",
+                "syscall": 82
+            },
+            {
+                "name": "ZwRevertContainerImpersonation",
+                "syscall": 393
+            },
+            {
+                "name": "ZwRollbackComplete",
+                "syscall": 394
+            },
+            {
+                "name": "ZwRollbackEnlistment",
+                "syscall": 395
+            },
+            {
+                "name": "ZwRollbackRegistryTransaction",
+                "syscall": 396
+            },
+            {
+                "name": "ZwRollbackTransaction",
+                "syscall": 397
+            },
+            {
+                "name": "ZwRollforwardTransactionManager",
+                "syscall": 398
+            },
+            {
+                "name": "ZwSaveKey",
+                "syscall": 399
+            },
+            {
+                "name": "ZwSaveKeyEx",
+                "syscall": 400
+            },
+            {
+                "name": "ZwSaveMergedKeys",
+                "syscall": 401
+            },
+            {
+                "name": "ZwSecureConnectPort",
+                "syscall": 402
+            },
+            {
+                "name": "ZwSerializeBoot",
+                "syscall": 403
+            },
+            {
+                "name": "ZwSetBootEntryOrder",
+                "syscall": 404
+            },
+            {
+                "name": "ZwSetBootOptions",
+                "syscall": 405
+            },
+            {
+                "name": "ZwSetCachedSigningLevel",
+                "syscall": 406
+            },
+            {
+                "name": "ZwSetCachedSigningLevel2",
+                "syscall": 407
+            },
+            {
+                "name": "ZwSetContextThread",
+                "syscall": 408
+            },
+            {
+                "name": "ZwSetDebugFilterState",
+                "syscall": 409
+            },
+            {
+                "name": "ZwSetDefaultHardErrorPort",
+                "syscall": 410
+            },
+            {
+                "name": "ZwSetDefaultLocale",
+                "syscall": 411
+            },
+            {
+                "name": "ZwSetDefaultUILanguage",
+                "syscall": 412
+            },
+            {
+                "name": "ZwSetDriverEntryOrder",
+                "syscall": 413
+            },
+            {
+                "name": "ZwSetEaFile",
+                "syscall": 414
+            },
+            {
+                "name": "ZwSetEvent",
+                "syscall": 14
+            },
+            {
+                "name": "ZwSetEventBoostPriority",
+                "syscall": 45
+            },
+            {
+                "name": "ZwSetHighEventPair",
+                "syscall": 415
+            },
+            {
+                "name": "ZwSetHighWaitLowEventPair",
+                "syscall": 416
+            },
+            {
+                "name": "ZwSetIRTimer",
+                "syscall": 417
+            },
+            {
+                "name": "ZwSetInformationCpuPartition",
+                "syscall": 418
+            },
+            {
+                "name": "ZwSetInformationDebugObject",
+                "syscall": 419
+            },
+            {
+                "name": "ZwSetInformationEnlistment",
+                "syscall": 420
+            },
+            {
+                "name": "ZwSetInformationFile",
+                "syscall": 39
+            },
+            {
+                "name": "ZwSetInformationIoRing",
+                "syscall": 421
+            },
+            {
+                "name": "ZwSetInformationJobObject",
+                "syscall": 422
+            },
+            {
+                "name": "ZwSetInformationKey",
+                "syscall": 423
+            },
+            {
+                "name": "ZwSetInformationObject",
+                "syscall": 92
+            },
+            {
+                "name": "ZwSetInformationProcess",
+                "syscall": 28
+            },
+            {
+                "name": "ZwSetInformationResourceManager",
+                "syscall": 424
+            },
+            {
+                "name": "ZwSetInformationSymbolicLink",
+                "syscall": 425
+            },
+            {
+                "name": "ZwSetInformationThread",
+                "syscall": 13
+            },
+            {
+                "name": "ZwSetInformationToken",
+                "syscall": 426
+            },
+            {
+                "name": "ZwSetInformationTransaction",
+                "syscall": 427
+            },
+            {
+                "name": "ZwSetInformationTransactionManager",
+                "syscall": 428
+            },
+            {
+                "name": "ZwSetInformationVirtualMemory",
+                "syscall": 429
+            },
+            {
+                "name": "ZwSetInformationWorkerFactory",
+                "syscall": 430
+            },
+            {
+                "name": "ZwSetIntervalProfile",
+                "syscall": 431
+            },
+            {
+                "name": "ZwSetIoCompletion",
+                "syscall": 432
+            },
+            {
+                "name": "ZwSetIoCompletionEx",
+                "syscall": 433
+            },
+            {
+                "name": "ZwSetLdtEntries",
+                "syscall": 434
+            },
+            {
+                "name": "ZwSetLowEventPair",
+                "syscall": 435
+            },
+            {
+                "name": "ZwSetLowWaitHighEventPair",
+                "syscall": 436
+            },
+            {
+                "name": "ZwSetQuotaInformationFile",
+                "syscall": 437
+            },
+            {
+                "name": "ZwSetSecurityObject",
+                "syscall": 438
+            },
+            {
+                "name": "ZwSetSystemEnvironmentValue",
+                "syscall": 439
+            },
+            {
+                "name": "ZwSetSystemEnvironmentValueEx",
+                "syscall": 440
+            },
+            {
+                "name": "ZwSetSystemInformation",
+                "syscall": 441
+            },
+            {
+                "name": "ZwSetSystemPowerState",
+                "syscall": 442
+            },
+            {
+                "name": "ZwSetSystemTime",
+                "syscall": 443
+            },
+            {
+                "name": "ZwSetThreadExecutionState",
+                "syscall": 444
+            },
+            {
+                "name": "ZwSetTimer",
+                "syscall": 98
+            },
+            {
+                "name": "ZwSetTimer2",
+                "syscall": 445
+            },
+            {
+                "name": "ZwSetTimerEx",
+                "syscall": 446
+            },
+            {
+                "name": "ZwSetTimerResolution",
+                "syscall": 447
+            },
+            {
+                "name": "ZwSetUuidSeed",
+                "syscall": 448
+            },
+            {
+                "name": "ZwSetValueKey",
+                "syscall": 96
+            },
+            {
+                "name": "ZwSetVolumeInformationFile",
+                "syscall": 449
+            },
+            {
+                "name": "ZwSetWnfProcessNotificationEvent",
+                "syscall": 450
+            },
+            {
+                "name": "ZwShutdownSystem",
+                "syscall": 451
+            },
+            {
+                "name": "ZwShutdownWorkerFactory",
+                "syscall": 452
+            },
+            {
+                "name": "ZwSignalAndWaitForSingleObject",
+                "syscall": 453
+            },
+            {
+                "name": "ZwSinglePhaseReject",
+                "syscall": 454
+            },
+            {
+                "name": "ZwStartProfile",
+                "syscall": 455
+            },
+            {
+                "name": "ZwStopProfile",
+                "syscall": 456
+            },
+            {
+                "name": "ZwSubmitIoRing",
+                "syscall": 457
+            },
+            {
+                "name": "ZwSubscribeWnfStateChange",
+                "syscall": 458
+            },
+            {
+                "name": "ZwSuspendProcess",
+                "syscall": 459
+            },
+            {
+                "name": "ZwSuspendThread",
+                "syscall": 460
+            },
+            {
+                "name": "ZwSystemDebugControl",
+                "syscall": 461
+            },
+            {
+                "name": "ZwTerminateEnclave",
+                "syscall": 462
+            },
+            {
+                "name": "ZwTerminateJobObject",
+                "syscall": 463
+            },
+            {
+                "name": "ZwTerminateProcess",
+                "syscall": 44
+            },
+            {
+                "name": "ZwTerminateThread",
+                "syscall": 83
+            },
+            {
+                "name": "ZwTestAlert",
+                "syscall": 464
+            },
+            {
+                "name": "ZwThawRegistry",
+                "syscall": 465
+            },
+            {
+                "name": "ZwThawTransactions",
+                "syscall": 466
+            },
+            {
+                "name": "ZwTraceControl",
+                "syscall": 467
+            },
+            {
+                "name": "ZwTraceEvent",
+                "syscall": 94
+            },
+            {
+                "name": "ZwTranslateFilePath",
+                "syscall": 468
+            },
+            {
+                "name": "ZwUmsThreadYield",
+                "syscall": 469
+            },
+            {
+                "name": "ZwUnloadDriver",
+                "syscall": 470
+            },
+            {
+                "name": "ZwUnloadKey",
+                "syscall": 471
+            },
+            {
+                "name": "ZwUnloadKey2",
+                "syscall": 472
+            },
+            {
+                "name": "ZwUnloadKeyEx",
+                "syscall": 473
+            },
+            {
+                "name": "ZwUnlockFile",
+                "syscall": 474
+            },
+            {
+                "name": "ZwUnlockVirtualMemory",
+                "syscall": 475
+            },
+            {
+                "name": "ZwUnmapViewOfSection",
+                "syscall": 42
+            },
+            {
+                "name": "ZwUnmapViewOfSectionEx",
+                "syscall": 476
+            },
+            {
+                "name": "ZwUnsubscribeWnfStateChange",
+                "syscall": 477
+            },
+            {
+                "name": "ZwUpdateWnfStateData",
+                "syscall": 478
+            },
+            {
+                "name": "ZwVdmControl",
+                "syscall": 479
+            },
+            {
+                "name": "ZwWaitForAlertByThreadId",
+                "syscall": 480
+            },
+            {
+                "name": "ZwWaitForDebugEvent",
+                "syscall": 481
+            },
+            {
+                "name": "ZwWaitForKeyedEvent",
+                "syscall": 482
+            },
+            {
+                "name": "ZwWaitForMultipleObjects",
+                "syscall": 91
+            },
+            {
+                "name": "ZwWaitForMultipleObjects32",
+                "syscall": 26
+            },
+            {
+                "name": "ZwWaitForSingleObject",
+                "syscall": 4
+            },
+            {
+                "name": "ZwWaitForWorkViaWorkerFactory",
+                "syscall": 483
+            },
+            {
+                "name": "ZwWaitHighEventPair",
+                "syscall": 484
+            },
+            {
+                "name": "ZwWaitLowEventPair",
+                "syscall": 485
+            },
+            {
+                "name": "ZwWorkerFactoryWorkerReady",
+                "syscall": 1
+            },
+            {
+                "name": "ZwWriteFile",
+                "syscall": 8
+            },
+            {
+                "name": "ZwWriteFileGather",
+                "syscall": 27
+            },
+            {
+                "name": "ZwWriteRequestData",
+                "syscall": 87
+            },
+            {
+                "name": "ZwWriteVirtualMemory",
+                "syscall": 58
+            },
+            {
+                "name": "ZwYieldExecution",
+                "syscall": 70
+            }
+        ]
+    }
+]

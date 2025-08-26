@@ -14,15 +14,20 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
 
-    const exe = b.addExecutable(.{
-        .name = "syscall-dumper",
+    const inner_exe = b.createModule(.{
         .root_source_file = b.path("src/main.zig"),
         .target = target,
         .optimize = optimize,
+        .imports = &.{
+            .{ .name = "args", .module = args.module("args") },
+            .{ .name = "syscalls", .module = load_syscall_table },
+        },
     });
-    exe.root_module.addImport("syscalls", load_syscall_table);
-    exe.root_module.addImport("args", args.module("args"));
 
+    const exe = b.addExecutable(.{
+        .name = "syscall-dumper",
+        .root_module = inner_exe,
+    });
     b.installArtifact(exe);
 
     const run_cmd = b.addRunArtifact(exe);
