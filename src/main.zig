@@ -8,6 +8,10 @@ pub fn main() !void {
     const options = args.parseForCurrentProcess(Args, alloc, .print) catch return error.ArgsFailed;
     defer options.deinit();
 
+    var stdout_writer = std.fs.File.stdout().writer(&.{});
+    var stdout_iface = &stdout_writer.interface;
+    defer stdout_iface.flush() catch {};
+
     const parsed = options.options;
 
     const exe_name = options.executable_name orelse "syscall-dumper.exe";
@@ -21,19 +25,19 @@ pub fn main() !void {
     defer alloc.free(out_text);
 
     if (parsed.help) {
-        try args.printHelp(Args, out_text, std.fs.File.stdout().writer());
+        try args.printHelp(Args, out_text, stdout_iface);
         return;
     }
 
     const parsed_dlls = parsed.dll orelse {
         std.log.err("DLL argument not found.", .{});
-        try args.printHelp(Args, out_text, std.fs.File.stdout().writer());
+        try args.printHelp(Args, out_text, stdout_iface);
         return;
     };
 
     const parsed_file = parsed.file orelse {
         std.log.err("File to write to not found.", .{});
-        try args.printHelp(Args, out_text, std.fs.File.stdout().writer());
+        try args.printHelp(Args, out_text, stdout_iface);
         return;
     };
 
@@ -64,7 +68,7 @@ pub fn main() !void {
         };
     }
 
-    const stringified = try std.json.stringifyAlloc(alloc, jsons, .{ .whitespace = .indent_4 });
+    const stringified = try std.json.Stringify.valueAlloc(alloc, jsons, .{ .whitespace = .indent_4 });
     defer alloc.free(stringified);
 
     const file = try std.fs.cwd().createFile(parsed_file, .{
@@ -72,7 +76,10 @@ pub fn main() !void {
     });
     defer file.close();
 
-    try file.writeAll(stringified);
+    var writer = file.writer(&.{});
+    var iface = &writer.interface;
+    defer iface.flush() catch {};
+    try iface.writeAll(stringified);
 }
 
 const Json = struct {

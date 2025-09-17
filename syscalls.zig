@@ -82,7 +82,7 @@ pub fn fillInformation(
     const file = try std.fs.openFileAbsolute(path, .{});
     defer file.close();
 
-    const data = try file.reader().readAllAlloc(alloc, max_load_size orelse gb);
+    const data = try file.readToEndAlloc(alloc, max_load_size orelse gb);
     defer alloc.free(data);
 
     const coff = try Coff.init(data, false);
@@ -129,7 +129,7 @@ pub fn fillInformation(
         inline .addresses => @as(usize, 0),
     };
 
-    try list.resize(i);
+    try list.resize(alloc, i);
     info.dll.fi = try list.toOwnedSlice(alloc);
 
     return info;
